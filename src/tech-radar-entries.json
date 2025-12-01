@@ -1,0 +1,58 @@
+[
+  {
+    "tags": [
+      "ai"
+    ],
+    "name": "chatgpt",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "ai"
+    ],
+    "name": "claude",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "ai"
+    ],
+    "name": "gemini",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "ai"
+    ],
+    "name": "@langchain/openai",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "approach"
+    ],
+    "name": "openspec first",
+    "quadrant": "Techniques",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "approach"
+    ],
+    "name": "SSG",
+    "quadrant": "Techniques",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "approach"
+    ],
+    "name": "SSR",
+    "quadrant": "Techniques",
+    "ring": "Adopt/Proofed"
+  }
+]
