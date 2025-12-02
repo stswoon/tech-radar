@@ -1,3 +1,5 @@
+import type {RadarQuadrant} from "./types.ts";
+
 /**
  * Простой детерминированный «рандом» по строке,
  * чтобы точки всегда ставились одинаково при одном и том же id.
@@ -10,3 +12,12 @@ export function hashStringToUnit(str: string): number {
   const result = hash / 0xffffffff;
   return result;
 }
+
+export const quadrantsWithAnglesUtil = (quadrants: RadarQuadrant[]) => {
+    const angleStep = (2 * Math.PI) / Math.max(quadrants.length, 1);
+    return quadrants.map((q, index) => ({
+        ...q,
+        startAngle: index * angleStep,
+        endAngle: (index + 1) * angleStep,
+    }));
+};

@@ -3,7 +3,7 @@ import './App.css'
 import radarStructure from "./tech-radar-structure.json";
 import radarEntries from "./tech-radar-entries.json";
 
-import {TechRadar} from "./TechRadar.tsx";
+import {TechRadar} from "./components/TechRadar.tsx";
 import type {RadarConfig, RadarEntry, RadarQuadrant, RadarRing} from "./types.ts";
 
 const radarConfig: RadarConfig = {
