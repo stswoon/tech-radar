@@ -1,8 +1,6 @@
-import './TechRadar.css'
-
 import {type FC, useMemo, useState} from "react";
-import {type RadarEntry, type RadarQuadrant, type RadarRing} from "../types.ts";
-import {hashStringToUnit, quadrantsWithAnglesUtil} from "../utils.ts";
+import {type RadarEntry, type RadarQuadrant, type RadarRing} from "./types.ts";
+import {hashStringToUnit, quadrantsWithAnglesUtil} from "./utils.ts";
 
 interface EntriesProps {
     quadrants: RadarQuadrant[];

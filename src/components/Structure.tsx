@@ -1,9 +1,7 @@
-import './TechRadar.css'
-
 import {type FC, useMemo} from "react";
-import {type RadarQuadrant, type RadarRing} from "../types.ts";
+import {type RadarQuadrant, type RadarRing} from "./types.ts";
 import {QUADRANTS_WITH_ANGLE_LINE_WIDTH, RING_LINE_WIDTH} from "../const.ts";
-import {quadrantsWithAnglesUtil} from "../utils.ts";
+import {quadrantsWithAnglesUtil} from "./utils.ts";
 
 
 interface StructureProps {

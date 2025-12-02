@@ -1,7 +1,5 @@
-import './TechRadar.css'
-
 import {type FC} from "react";
-import {type RadarEntry, type RadarQuadrant, type RadarRing} from "../types.ts";
+import {type RadarEntry, type RadarQuadrant, type RadarRing} from "./types.ts";
 
 interface ModalProps {
     quadrants: RadarQuadrant[];
