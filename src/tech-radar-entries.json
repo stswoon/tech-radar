@@ -5,7 +5,7 @@
     ],
     "name": "chatgpt",
     "quadrant": "Tools",
-    "ring": "Adopt/Proofed",
+    "ring": "Trial/Possible",
     "description": "Hello **world** !"
   },
   {
@@ -14,7 +14,7 @@
     ],
     "name": "claude",
     "quadrant": "Tools",
-    "ring": "Adopt/Proofed"
+    "ring": "Trial/Possible"
   },
   {
     "tags": [
@@ -22,7 +22,7 @@
     ],
     "name": "gemini",
     "quadrant": "Tools",
-    "ring": "Adopt/Proofed"
+    "ring": "Trial/Possible"
   },
   {
     "tags": [
@@ -30,30 +30,1157 @@
     ],
     "name": "@langchain/openai",
     "quadrant": "Tools",
-    "ring": "Adopt/Proofed"
+    "ring": "Trial/Possible"
   },
   {
-    "tags": [
-      "approach"
-    ],
     "name": "openspec first",
     "quadrant": "Techniques",
     "ring": "Adopt/Proofed"
   },
   {
-    "tags": [
-      "approach"
-    ],
     "name": "SSG",
     "quadrant": "Techniques",
     "ring": "Adopt/Proofed"
   },
   {
-    "tags": [
-      "approach"
-    ],
     "name": "SSR",
     "quadrant": "Techniques",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "architecture"
+    ],
+    "name": "FSD",
+    "quadrant": "Techniques",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "architecture"
+    ],
+    "name": "microfrontends",
+    "quadrant": "Techniques",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "architecture"
+    ],
+    "name": "modulefederation",
+    "quadrant": "Techniques",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "browser list"
+    ],
+    "name": "swiper",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "build system"
+    ],
+    "name": "concurrently",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "build system"
+    ],
+    "name": "copyfiles",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "build system"
+    ],
+    "name": "cross-env",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "build system"
+    ],
+    "name": "npm",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "build system"
+    ],
+    "name": "npm-run-all",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "build system"
+    ],
+    "name": "rimraf",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "build system"
+    ],
+    "name": "ts-node",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "build system"
+    ],
+    "name": "yarn",
+    "quadrant": "Tools",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "bundler"
+    ],
+    "name": "rollup",
+    "quadrant": "Tools",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "bundler"
+    ],
+    "name": "rollup",
+    "quadrant": "Tools",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "bundler"
+    ],
+    "name": "vite",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "bundler"
+    ],
+    "name": "webpack",
+    "quadrant": "Tools",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "ci\\cd"
+    ],
+    "name": "gitlab-ci",
+    "quadrant": "Platforms",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "CMS"
+    ],
+    "name": "Strapi",
+    "quadrant": "Platforms",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "codegen"
+    ],
+    "name": "@rtk-query/codegen-openap",
+    "quadrant": "Techniques",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "data hooks"
+    ],
+    "name": "tanstack\\query",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "data hooks"
+    ],
+    "name": "useSWR",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "database"
+    ],
+    "name": "better-sqlite3",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "database"
+    ],
+    "name": "mongoose",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "date"
+    ],
+    "name": "@mui/x-date-pickers",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "date"
+    ],
+    "name": "DateFns",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "date"
+    ],
+    "name": "dayjs",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "diagrams"
+    ],
+    "name": "drawio",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "docs"
+    ],
+    "name": "Convential commit",
+    "quadrant": "Techniques",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "docs"
+    ],
+    "name": "dynosareus",
+    "quadrant": "Tools",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "docs"
+    ],
+    "name": "markdown",
+    "quadrant": "Techniques",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "docs"
+    ],
+    "name": "typedoc",
+    "quadrant": "Techniques",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "drag&drop"
+    ],
+    "name": "@dnd-kit/core",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "drag&drop"
+    ],
+    "name": "react-draggable",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "drag&drop"
+    ],
+    "name": "react-dropzone",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "express lib"
+    ],
+    "name": "body-parser",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "express lib"
+    ],
+    "name": "cors",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "express lib"
+    ],
+    "name": "express-ws",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "forms"
+    ],
+    "name": "imask",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "forms"
+    ],
+    "name": "react-hook-form",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "framework"
+    ],
+    "name": "NextJs",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "framework"
+    ],
+    "name": "React",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "framework"
+    ],
+    "name": "react native",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "framework"
+    ],
+    "name": "react reconciller",
+    "quadrant": "Language & Framework",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "google maps"
+    ],
+    "name": "@react-google-maps/api",
+    "quadrant": "Tools",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "graphql"
+    ],
+    "name": "apollo",
+    "quadrant": "Language & Framework",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "ide"
+    ],
+    "name": "cursor",
+    "quadrant": "Tools",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "ide"
+    ],
+    "name": "idea",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "ide"
+    ],
+    "name": "trae",
+    "quadrant": "Tools",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "ide"
+    ],
+    "name": "vs code",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "language"
+    ],
+    "name": "typescript",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "language"
+    ],
+    "name": "typescript advanced typings",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "@monaco-editor/react",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "@react-hook/resize-observer",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "@rsql/builder",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "adm-zip",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "classnames",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "debounce",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "deep-for-each",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "globals",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "jquery",
+    "quadrant": "Language & Framework",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "jsdom",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "jszip",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "less",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "lodash",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "minimist",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "nanoid",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "nodemon",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "react-resizable-panels",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "sass",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "unique-names-generator",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "url-join",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "url-loader",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "uuid",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "lib"
+    ],
+    "name": "zod",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "lint"
+    ],
+    "name": "eslint",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "lint"
+    ],
+    "name": "husky",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "lint"
+    ],
+    "name": "lint-staged",
+    "quadrant": "Tools",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "lint"
+    ],
+    "name": "prettier",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "lint"
+    ],
+    "name": "simple-git-hooks",
+    "quadrant": "Tools",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "lint"
+    ],
+    "name": "stylelint",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "liny"
+    ],
+    "name": "eslint complexity rules",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "localization"
+    ],
+    "name": "i18next",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "localization"
+    ],
+    "name": "next-i18next",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "markdown"
+    ],
+    "name": "MarkdownIt",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "monorepo"
+    ],
+    "name": "pnpm",
+    "quadrant": "Tools",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "monorepo"
+    ],
+    "name": "turbo",
+    "quadrant": "Tools",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "oauth"
+    ],
+    "name": "jwt-decode",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "oauth"
+    ],
+    "name": "keycloak-js",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "oauth"
+    ],
+    "name": "keyclock",
+    "quadrant": "Platforms",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "oauth"
+    ],
+    "name": "next-auth",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "open-api"
+    ],
+    "name": "swagger",
+    "quadrant": "Techniques",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "pdf"
+    ],
+    "name": "jspdf",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "pdf"
+    ],
+    "name": "pdfjs-dist",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "pdf"
+    ],
+    "name": "react-pdf",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "performance"
+    ],
+    "name": "lighthouse",
+    "quadrant": "Techniques",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "pwa"
+    ],
+    "name": "vite-plugin-pwa",
+    "quadrant": "Techniques",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "routing"
+    ],
+    "name": "react-router",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "routing"
+    ],
+    "name": "tanstack\\router",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "server"
+    ],
+    "name": "nginx",
+    "quadrant": "Platforms",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "server-frm"
+    ],
+    "name": "Express",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "server-frm"
+    ],
+    "name": "KoaJS",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "server-frm"
+    ],
+    "name": "NodeJs",
+    "quadrant": "Platforms",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "state"
+    ],
+    "name": "@reduxjs/toolkit",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "state"
+    ],
+    "name": "mobx",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "state"
+    ],
+    "name": "redux-dynamic-middlewares",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "state"
+    ],
+    "name": "redux-persist",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "state"
+    ],
+    "name": "tanstack\\store",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "state"
+    ],
+    "name": "zustand",
+    "quadrant": "Language & Framework",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "state and data hooks"
+    ],
+    "name": "RtkQuery",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "telemetry"
+    ],
+    "name": "centry",
+    "quadrant": "Tools",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "telemetry"
+    ],
+    "name": "jaeger",
+    "quadrant": "Platforms",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "telemetry"
+    ],
+    "name": "loglevel",
+    "quadrant": "Tools",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "telemetry"
+    ],
+    "name": "opentelemetry",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "telemetry"
+    ],
+    "name": "prom-client",
+    "quadrant": "Tools",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "telemetry"
+    ],
+    "name": "prometeus",
+    "quadrant": "Tools",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "test"
+    ],
+    "name": "jest",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "test"
+    ],
+    "name": "json-server",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "test"
+    ],
+    "name": "newman",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "test"
+    ],
+    "name": "playwrite",
+    "quadrant": "Platforms",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "test"
+    ],
+    "name": "postman",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "test"
+    ],
+    "name": "puppeteer",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "test"
+    ],
+    "name": "testcafe",
+    "quadrant": "Tools",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "uikit"
+    ],
+    "name": "notistack",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "transport"
+    ],
+    "name": "graphql-request",
+    "quadrant": "Techniques",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "transport"
+    ],
+    "name": "rest",
+    "quadrant": "Techniques",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "transport"
+    ],
+    "name": "SSE",
+    "quadrant": "Techniques",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "transport"
+    ],
+    "name": "StompJS",
+    "quadrant": "Techniques",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "transport"
+    ],
+    "name": "websocket",
+    "quadrant": "Techniques",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "uikit"
+    ],
+    "name": "@mui/material",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "uikit"
+    ],
+    "name": "AntDesign",
+    "quadrant": "Language & Framework",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "uikit"
+    ],
+    "name": "country-flag-icons",
+    "quadrant": "Language & Framework",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "uikit"
+    ],
+    "name": "MUI",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "uikit"
+    ],
+    "name": "react-imask",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "uikit"
+    ],
+    "name": "react-number-format",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "xss"
+    ],
+    "name": "isomorphic-dompurify",
+    "quadrant": "Language & Framework",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "diagrams"
+    ],
+    "name": "pluntuml",
+    "quadrant": "Tools",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "IDE"
+    ],
+    "name": "webstorm",
+    "quadrant": "Tools",
+    "ring": "Trial/Possible"
+  },
+  {
+    "tags": [
+      "docker"
+    ],
+    "name": "docker",
+    "quadrant": "Platforms",
+    "ring": "Adopt/Proofed"
+  },
+  {
+    "tags": [
+      "docker"
+    ],
+    "name": "rancher desktop",
+    "quadrant": "Platforms",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "docker"
+    ],
+    "name": "docker desktop",
+    "quadrant": "Platforms",
+    "ring": "Hold/Cancelled/Legacy"
+  },
+  {
+    "tags": [
+      "docker"
+    ],
+    "name": "podman",
+    "quadrant": "Platforms",
+    "ring": "Assess/New"
+  },
+  {
+    "tags": [
+      "docker"
+    ],
+    "name": "kubernetes",
+    "quadrant": "Platforms",
     "ring": "Adopt/Proofed"
   }
 ]

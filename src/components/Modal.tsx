@@ -73,6 +73,10 @@ export const Modal: FC<ModalProps> = ({selectedItem, onClose, quadrants, rings})
                         </div>
 
                         <div style={{fontSize: 13, color: "#444", lineHeight: 1.5}}>
+                            {!!selectedItem.tags?.length && <div>
+                                <b>Tags:</b>{" "}
+                                {selectedItem.tags.join(", ")}
+                            </div>}
                             <div>
                                 <b>Квадрант:</b>{" "}
                                 {quadrants.find((q) => q.name === selectedItem.quadrant)?.name}

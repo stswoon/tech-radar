@@ -18,7 +18,7 @@ export const Entries: FC<EntriesProps> = ({entries, quadrants, rings, width, hei
     const padding = 40;
     const maxRadius = viewBoxSize / 2 - padding;
 
-    const ringWidth = maxRadius / Math.max(rings.length, 1);
+    const ringWidth = maxRadius / (Math.max(rings.length, 1) + 1);
 
     const [hoveredId, setHoveredId] = useState<string | null>(null);
 
@@ -48,15 +48,20 @@ export const Entries: FC<EntriesProps> = ({entries, quadrants, rings, width, hei
                     return null;
                 }
 
-                const innerRadius = ringWidth * ringIndex;
-                const outerRadius = ringWidth * (ringIndex + 1);
+                const outerRingIndex = ringIndex + 2;
+                let innerRingIndex = outerRingIndex - 1;
+                if (ringIndex == 0) {
+                    innerRingIndex = 0;
+                }
+                const innerRadius = ringWidth * innerRingIndex;
+                const outerRadius = ringWidth * outerRingIndex;
 
                 const seed = hashStringToUnit(entry.name);
                 const seed2 = hashStringToUnit(entry.name + "_2");
 
                 const angle =
-                    quadrant.startAngle +
-                    (quadrant.endAngle - quadrant.startAngle) * seed;
+                    (quadrant.startAngle + 0.05) +
+                    ((quadrant.endAngle - 0.05) - quadrant.startAngle) * seed;
                 const radius =
                     innerRadius + (outerRadius - innerRadius) * (0.15 + 0.7 * seed2);
 
