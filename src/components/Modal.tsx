@@ -17,7 +17,6 @@ export const Modal: FC<ModalProps> = ({selectedItem, onClose, quadrants, rings})
             {/* Модалка по клику */}
             {selectedItem && (
                 <div
-                    // onClick={() => setSelectedId(null)}
                     onClick={onClose}
                     style={{
                         position: "fixed",
@@ -101,14 +100,13 @@ export const Modal: FC<ModalProps> = ({selectedItem, onClose, quadrants, rings})
                                         target="_blank"
                                         rel="noreferrer"
                                     >
-                                        Открыть ссылку
+                                        {selectedItem.link}
                                     </a>
                                 </p>
                             )}
                             {!selectedItem.description && !selectedItem.link && (
                                 <p style={{marginTop: 10, color: "#777"}}>
-                                    Описание не заполнено. Можно добавить поле{" "}
-                                    <code>description</code> в JSON.
+                                    Описание не заполнено.
                                 </p>
                             )}
                         </div>

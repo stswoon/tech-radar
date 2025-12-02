@@ -4,48 +4,59 @@
       "ai"
     ],
     "name": "chatgpt",
+    "link": "https://www.npmjs.com/package/chatgpt",
     "quadrant": "Tools",
     "ring": "Trial/Possible",
-    "description": "Hello **world** !"
+    "description": "ChatGPT is OpenAI’s large‑language‑model API providing text and multimodal generation capabilities."
   },
   {
     "tags": [
       "ai"
     ],
     "name": "claude",
+    "link": "https://www.npmjs.com/package/claude",
     "quadrant": "Tools",
-    "ring": "Trial/Possible"
+    "ring": "Trial/Possible",
+    "description": "Claude is Anthropic’s AI assistant API focused on safe, steerable large‑language‑model interactions."
   },
   {
     "tags": [
       "ai"
     ],
     "name": "gemini",
+    "link": "https://www.npmjs.com/package/gemini",
     "quadrant": "Tools",
-    "ring": "Trial/Possible"
+    "ring": "Trial/Possible",
+    "description": "Gemini is Google’s multimodal LLM platform providing text, vision, and code generation APIs."
   },
   {
     "tags": [
       "ai"
     ],
     "name": "@langchain/openai",
+    "link": "https://www.npmjs.com/package/@langchain/openai",
     "quadrant": "Tools",
-    "ring": "Trial/Possible"
+    "ring": "Trial/Possible",
+    "description": "LangChain OpenAI package provides LangChain integrations for invoking OpenAI models via unified chains and agents."
   },
   {
     "name": "openspec first",
+    "link": "https://www.npmjs.com/package/openspec first",
     "quadrant": "Techniques",
-    "ring": "Adopt/Proofed"
+    "ring": "Adopt/Proofed",
+    "description": "Technology description from official documentation is not yet defined."
   },
   {
     "name": "SSG",
     "quadrant": "Techniques",
-    "ring": "Adopt/Proofed"
+    "ring": "Adopt/Proofed",
+    "description": "SSG (Static‑Site Generation) pre-renders pages at build time to produce static HTML for fast delivery."
   },
   {
     "name": "SSR",
     "quadrant": "Techniques",
-    "ring": "Adopt/Proofed"
+    "ring": "Adopt/Proofed",
+    "description": "SSR (Server‑Side Rendering) renders pages on the server per request to improve SEO and initial load."
   },
   {
     "tags": [
@@ -53,77 +64,95 @@
     ],
     "name": "FSD",
     "quadrant": "Techniques",
-    "ring": "Trial/Possible"
+    "ring": "Trial/Possible",
+    "description": "Feature‑Sliced Design is an architectural methodology organizing frontend code into layers and slices for scalability."
   },
   {
     "tags": [
       "architecture"
     ],
     "name": "microfrontends",
+    "link": "https://www.npmjs.com/package/microfrontends",
     "quadrant": "Techniques",
-    "ring": "Assess/New"
+    "ring": "Assess/New",
+    "description": "Microfrontends is an architectural style where the UI is split into independently deployable frontend modules."
   },
   {
     "tags": [
       "architecture"
     ],
     "name": "modulefederation",
+    "link": "https://www.npmjs.com/package/modulefederation",
     "quadrant": "Techniques",
-    "ring": "Assess/New"
+    "ring": "Assess/New",
+    "description": "Webpack Module Federation enables runtime code sharing between separately built JavaScript bundles."
   },
   {
     "tags": [
       "browser list"
     ],
     "name": "swiper",
+    "link": "https://www.npmjs.com/package/swiper",
     "quadrant": "Tools",
-    "ring": "Trial/Possible"
+    "ring": "Trial/Possible",
+    "description": "Swiper is a modern touch slider library for mobile and web supporting gestures, pagination, and rich UI components."
   },
   {
     "tags": [
       "build system"
     ],
     "name": "concurrently",
+    "link": "https://www.npmjs.com/package/concurrently",
     "quadrant": "Tools",
-    "ring": "Trial/Possible"
+    "ring": "Trial/Possible",
+    "description": "Concurrently is an npm tool to run multiple commands in parallel in a single terminal."
   },
   {
     "tags": [
       "build system"
     ],
     "name": "copyfiles",
+    "link": "https://www.npmjs.com/package/copyfiles",
     "quadrant": "Tools",
-    "ring": "Trial/Possible"
+    "ring": "Trial/Possible",
+    "description": "copyfiles is an npm utility for recursively copying files and directory structures."
   },
   {
     "tags": [
       "build system"
     ],
     "name": "cross-env",
+    "link": "https://www.npmjs.com/package/cross-env",
     "quadrant": "Tools",
-    "ring": "Adopt/Proofed"
+    "ring": "Adopt/Proofed",
+    "description": "cross-env sets environment variables across operating systems in npm scripts."
   },
   {
     "tags": [
       "build system"
     ],
     "name": "npm",
+    "link": "https://www.npmjs.com/package/npm",
     "quadrant": "Tools",
-    "ring": "Adopt/Proofed"
+    "ring": "Adopt/Proofed",
+    "description": "npm is Node.js’s default package manager for installing, publishing, and managing JavaScript packages."
   },
   {
     "tags": [
       "build system"
     ],
     "name": "npm-run-all",
+    "link": "https://www.npmjs.com/package/npm-run-all",
     "quadrant": "Tools",
-    "ring": "Trial/Possible"
+    "ring": "Trial/Possible",
+    "description": "npm-run-all is a CLI tool to run multiple npm scripts sequentially or in parallel."
   },
   {
     "tags": [
       "build system"
     ],
     "name": "rimraf",
+    "link": "https://www.npmjs.com/package/rimraf",
     "quadrant": "Tools",
     "ring": "Trial/Possible"
   },
@@ -132,6 +161,7 @@
       "build system"
     ],
     "name": "ts-node",
+    "link": "https://www.npmjs.com/package/ts-node",
     "quadrant": "Tools",
     "ring": "Trial/Possible"
   },
@@ -140,6 +170,7 @@
       "build system"
     ],
     "name": "yarn",
+    "link": "https://www.npmjs.com/package/yarn",
     "quadrant": "Tools",
     "ring": "Hold/Cancelled/Legacy"
   },
@@ -148,6 +179,7 @@
       "bundler"
     ],
     "name": "rollup",
+    "link": "https://www.npmjs.com/package/rollup",
     "quadrant": "Tools",
     "ring": "Hold/Cancelled/Legacy"
   },
@@ -156,6 +188,7 @@
       "bundler"
     ],
     "name": "rollup",
+    "link": "https://www.npmjs.com/package/rollup",
     "quadrant": "Tools",
     "ring": "Hold/Cancelled/Legacy"
   },
@@ -164,6 +197,7 @@
       "bundler"
     ],
     "name": "vite",
+    "link": "https://www.npmjs.com/package/vite",
     "quadrant": "Tools",
     "ring": "Adopt/Proofed"
   },
@@ -172,6 +206,7 @@
       "bundler"
     ],
     "name": "webpack",
+    "link": "https://www.npmjs.com/package/webpack",
     "quadrant": "Tools",
     "ring": "Hold/Cancelled/Legacy"
   },
@@ -180,6 +215,7 @@
       "ci\\cd"
     ],
     "name": "gitlab-ci",
+    "link": "https://www.npmjs.com/package/gitlab-ci",
     "quadrant": "Platforms",
     "ring": "Trial/Possible"
   },
@@ -196,6 +232,7 @@
       "codegen"
     ],
     "name": "@rtk-query/codegen-openap",
+    "link": "https://www.npmjs.com/package/@rtk-query/codegen-openap",
     "quadrant": "Techniques",
     "ring": "Adopt/Proofed"
   },
@@ -204,7 +241,8 @@
       "data hooks"
     ],
     "name": "tanstack\\query",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/tanstack\\query",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -212,7 +250,7 @@
       "data hooks"
     ],
     "name": "useSWR",
-    "quadrant": "Language & Framework",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -220,7 +258,8 @@
       "database"
     ],
     "name": "better-sqlite3",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/better-sqlite3",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -228,7 +267,8 @@
       "database"
     ],
     "name": "mongoose",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/mongoose",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -236,15 +276,17 @@
       "date"
     ],
     "name": "@mui/x-date-pickers",
-    "quadrant": "Language & Framework",
-    "ring": "Adopt/Proofed"
+    "link": "https://www.npmjs.com/package/@mui/x-date-pickers",
+    "quadrant": "Languages & Frameworks",
+    "ring": "Adopt/Proofed",
+    "description": "MUI is a React component library implementing Material Design system components."
   },
   {
     "tags": [
       "date"
     ],
     "name": "DateFns",
-    "quadrant": "Language & Framework",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -252,7 +294,8 @@
       "date"
     ],
     "name": "dayjs",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/dayjs",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -260,6 +303,7 @@
       "diagrams"
     ],
     "name": "drawio",
+    "link": "https://www.npmjs.com/package/drawio",
     "quadrant": "Tools",
     "ring": "Trial/Possible"
   },
@@ -276,6 +320,7 @@
       "docs"
     ],
     "name": "dynosareus",
+    "link": "https://www.npmjs.com/package/dynosareus",
     "quadrant": "Tools",
     "ring": "Assess/New"
   },
@@ -284,6 +329,7 @@
       "docs"
     ],
     "name": "markdown",
+    "link": "https://www.npmjs.com/package/markdown",
     "quadrant": "Techniques",
     "ring": "Trial/Possible"
   },
@@ -292,6 +338,7 @@
       "docs"
     ],
     "name": "typedoc",
+    "link": "https://www.npmjs.com/package/typedoc",
     "quadrant": "Techniques",
     "ring": "Assess/New"
   },
@@ -300,7 +347,8 @@
       "drag&drop"
     ],
     "name": "@dnd-kit/core",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/@dnd-kit/core",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -308,7 +356,8 @@
       "drag&drop"
     ],
     "name": "react-draggable",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/react-draggable",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -316,7 +365,8 @@
       "drag&drop"
     ],
     "name": "react-dropzone",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/react-dropzone",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -324,7 +374,8 @@
       "express lib"
     ],
     "name": "body-parser",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/body-parser",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -332,7 +383,8 @@
       "express lib"
     ],
     "name": "cors",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/cors",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -340,7 +392,8 @@
       "express lib"
     ],
     "name": "express-ws",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/express-ws",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -348,7 +401,8 @@
       "forms"
     ],
     "name": "imask",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/imask",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -356,7 +410,8 @@
       "forms"
     ],
     "name": "react-hook-form",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/react-hook-form",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -364,7 +419,7 @@
       "framework"
     ],
     "name": "NextJs",
-    "quadrant": "Language & Framework",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -372,7 +427,7 @@
       "framework"
     ],
     "name": "React",
-    "quadrant": "Language & Framework",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -380,7 +435,8 @@
       "framework"
     ],
     "name": "react native",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/react native",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -388,7 +444,8 @@
       "framework"
     ],
     "name": "react reconciller",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/react reconciller",
+    "quadrant": "Languages & Frameworks",
     "ring": "Hold/Cancelled/Legacy"
   },
   {
@@ -396,6 +453,7 @@
       "google maps"
     ],
     "name": "@react-google-maps/api",
+    "link": "https://www.npmjs.com/package/@react-google-maps/api",
     "quadrant": "Tools",
     "ring": "Assess/New"
   },
@@ -404,7 +462,8 @@
       "graphql"
     ],
     "name": "apollo",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/apollo",
+    "quadrant": "Languages & Frameworks",
     "ring": "Hold/Cancelled/Legacy"
   },
   {
@@ -412,6 +471,7 @@
       "ide"
     ],
     "name": "cursor",
+    "link": "https://www.npmjs.com/package/cursor",
     "quadrant": "Tools",
     "ring": "Assess/New"
   },
@@ -420,6 +480,7 @@
       "ide"
     ],
     "name": "idea",
+    "link": "https://www.npmjs.com/package/idea",
     "quadrant": "Tools",
     "ring": "Trial/Possible"
   },
@@ -428,6 +489,7 @@
       "ide"
     ],
     "name": "trae",
+    "link": "https://www.npmjs.com/package/trae",
     "quadrant": "Tools",
     "ring": "Assess/New"
   },
@@ -436,6 +498,7 @@
       "ide"
     ],
     "name": "vs code",
+    "link": "https://www.npmjs.com/package/vs code",
     "quadrant": "Tools",
     "ring": "Trial/Possible"
   },
@@ -444,7 +507,8 @@
       "language"
     ],
     "name": "typescript",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/typescript",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -452,7 +516,8 @@
       "language"
     ],
     "name": "typescript advanced typings",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/typescript advanced typings",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -460,7 +525,8 @@
       "lib"
     ],
     "name": "@monaco-editor/react",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/@monaco-editor/react",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -468,7 +534,8 @@
       "lib"
     ],
     "name": "@react-hook/resize-observer",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/@react-hook/resize-observer",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -476,7 +543,8 @@
       "lib"
     ],
     "name": "@rsql/builder",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/@rsql/builder",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -484,7 +552,8 @@
       "lib"
     ],
     "name": "adm-zip",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/adm-zip",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -492,7 +561,8 @@
       "lib"
     ],
     "name": "classnames",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/classnames",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -500,7 +570,8 @@
       "lib"
     ],
     "name": "debounce",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/debounce",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -508,7 +579,8 @@
       "lib"
     ],
     "name": "deep-for-each",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/deep-for-each",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -516,7 +588,8 @@
       "lib"
     ],
     "name": "globals",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/globals",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -524,7 +597,8 @@
       "lib"
     ],
     "name": "jquery",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/jquery",
+    "quadrant": "Languages & Frameworks",
     "ring": "Hold/Cancelled/Legacy"
   },
   {
@@ -532,7 +606,8 @@
       "lib"
     ],
     "name": "jsdom",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/jsdom",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -540,7 +615,8 @@
       "lib"
     ],
     "name": "jszip",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/jszip",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -548,7 +624,8 @@
       "lib"
     ],
     "name": "less",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/less",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -556,7 +633,8 @@
       "lib"
     ],
     "name": "lodash",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/lodash",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -564,7 +642,8 @@
       "lib"
     ],
     "name": "minimist",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/minimist",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -572,7 +651,8 @@
       "lib"
     ],
     "name": "nanoid",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/nanoid",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -580,7 +660,8 @@
       "lib"
     ],
     "name": "nodemon",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/nodemon",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -588,7 +669,8 @@
       "lib"
     ],
     "name": "react-resizable-panels",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/react-resizable-panels",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -596,7 +678,8 @@
       "lib"
     ],
     "name": "sass",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/sass",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -604,7 +687,8 @@
       "lib"
     ],
     "name": "unique-names-generator",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/unique-names-generator",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -612,7 +696,8 @@
       "lib"
     ],
     "name": "url-join",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/url-join",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -620,7 +705,8 @@
       "lib"
     ],
     "name": "url-loader",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/url-loader",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -628,7 +714,8 @@
       "lib"
     ],
     "name": "uuid",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/uuid",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -636,7 +723,8 @@
       "lib"
     ],
     "name": "zod",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/zod",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -644,6 +732,7 @@
       "lint"
     ],
     "name": "eslint",
+    "link": "https://www.npmjs.com/package/eslint",
     "quadrant": "Tools",
     "ring": "Adopt/Proofed"
   },
@@ -652,6 +741,7 @@
       "lint"
     ],
     "name": "husky",
+    "link": "https://www.npmjs.com/package/husky",
     "quadrant": "Tools",
     "ring": "Adopt/Proofed"
   },
@@ -660,6 +750,7 @@
       "lint"
     ],
     "name": "lint-staged",
+    "link": "https://www.npmjs.com/package/lint-staged",
     "quadrant": "Tools",
     "ring": "Assess/New"
   },
@@ -668,6 +759,7 @@
       "lint"
     ],
     "name": "prettier",
+    "link": "https://www.npmjs.com/package/prettier",
     "quadrant": "Tools",
     "ring": "Adopt/Proofed"
   },
@@ -676,6 +768,7 @@
       "lint"
     ],
     "name": "simple-git-hooks",
+    "link": "https://www.npmjs.com/package/simple-git-hooks",
     "quadrant": "Tools",
     "ring": "Hold/Cancelled/Legacy"
   },
@@ -684,6 +777,7 @@
       "lint"
     ],
     "name": "stylelint",
+    "link": "https://www.npmjs.com/package/stylelint",
     "quadrant": "Tools",
     "ring": "Adopt/Proofed"
   },
@@ -692,6 +786,7 @@
       "liny"
     ],
     "name": "eslint complexity rules",
+    "link": "https://www.npmjs.com/package/eslint complexity rules",
     "quadrant": "Tools",
     "ring": "Trial/Possible"
   },
@@ -700,7 +795,8 @@
       "localization"
     ],
     "name": "i18next",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/i18next",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -708,7 +804,8 @@
       "localization"
     ],
     "name": "next-i18next",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/next-i18next",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -716,7 +813,7 @@
       "markdown"
     ],
     "name": "MarkdownIt",
-    "quadrant": "Language & Framework",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -724,6 +821,7 @@
       "monorepo"
     ],
     "name": "pnpm",
+    "link": "https://www.npmjs.com/package/pnpm",
     "quadrant": "Tools",
     "ring": "Assess/New"
   },
@@ -732,6 +830,7 @@
       "monorepo"
     ],
     "name": "turbo",
+    "link": "https://www.npmjs.com/package/turbo",
     "quadrant": "Tools",
     "ring": "Assess/New"
   },
@@ -740,7 +839,8 @@
       "oauth"
     ],
     "name": "jwt-decode",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/jwt-decode",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -748,7 +848,8 @@
       "oauth"
     ],
     "name": "keycloak-js",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/keycloak-js",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -756,6 +857,7 @@
       "oauth"
     ],
     "name": "keyclock",
+    "link": "https://www.npmjs.com/package/keyclock",
     "quadrant": "Platforms",
     "ring": "Assess/New"
   },
@@ -764,7 +866,8 @@
       "oauth"
     ],
     "name": "next-auth",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/next-auth",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -772,6 +875,7 @@
       "open-api"
     ],
     "name": "swagger",
+    "link": "https://www.npmjs.com/package/swagger",
     "quadrant": "Techniques",
     "ring": "Adopt/Proofed"
   },
@@ -780,7 +884,8 @@
       "pdf"
     ],
     "name": "jspdf",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/jspdf",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -788,7 +893,8 @@
       "pdf"
     ],
     "name": "pdfjs-dist",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/pdfjs-dist",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -796,7 +902,8 @@
       "pdf"
     ],
     "name": "react-pdf",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/react-pdf",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -804,6 +911,7 @@
       "performance"
     ],
     "name": "lighthouse",
+    "link": "https://www.npmjs.com/package/lighthouse",
     "quadrant": "Techniques",
     "ring": "Adopt/Proofed"
   },
@@ -812,6 +920,7 @@
       "pwa"
     ],
     "name": "vite-plugin-pwa",
+    "link": "https://www.npmjs.com/package/vite-plugin-pwa",
     "quadrant": "Techniques",
     "ring": "Trial/Possible"
   },
@@ -820,7 +929,8 @@
       "routing"
     ],
     "name": "react-router",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/react-router",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -828,7 +938,8 @@
       "routing"
     ],
     "name": "tanstack\\router",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/tanstack\\router",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -836,6 +947,7 @@
       "server"
     ],
     "name": "nginx",
+    "link": "https://www.npmjs.com/package/nginx",
     "quadrant": "Platforms",
     "ring": "Adopt/Proofed"
   },
@@ -844,7 +956,7 @@
       "server-frm"
     ],
     "name": "Express",
-    "quadrant": "Language & Framework",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -852,7 +964,7 @@
       "server-frm"
     ],
     "name": "KoaJS",
-    "quadrant": "Language & Framework",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -868,7 +980,8 @@
       "state"
     ],
     "name": "@reduxjs/toolkit",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/@reduxjs/toolkit",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -876,7 +989,8 @@
       "state"
     ],
     "name": "mobx",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/mobx",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -884,7 +998,8 @@
       "state"
     ],
     "name": "redux-dynamic-middlewares",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/redux-dynamic-middlewares",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -892,7 +1007,8 @@
       "state"
     ],
     "name": "redux-persist",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/redux-persist",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -900,7 +1016,8 @@
       "state"
     ],
     "name": "tanstack\\store",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/tanstack\\store",
+    "quadrant": "Languages & Frameworks",
     "ring": "Assess/New"
   },
   {
@@ -908,7 +1025,8 @@
       "state"
     ],
     "name": "zustand",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/zustand",
+    "quadrant": "Languages & Frameworks",
     "ring": "Trial/Possible"
   },
   {
@@ -916,7 +1034,7 @@
       "state and data hooks"
     ],
     "name": "RtkQuery",
-    "quadrant": "Language & Framework",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -924,6 +1042,7 @@
       "telemetry"
     ],
     "name": "centry",
+    "link": "https://www.npmjs.com/package/centry",
     "quadrant": "Tools",
     "ring": "Assess/New"
   },
@@ -932,6 +1051,7 @@
       "telemetry"
     ],
     "name": "jaeger",
+    "link": "https://www.npmjs.com/package/jaeger",
     "quadrant": "Platforms",
     "ring": "Trial/Possible"
   },
@@ -940,6 +1060,7 @@
       "telemetry"
     ],
     "name": "loglevel",
+    "link": "https://www.npmjs.com/package/loglevel",
     "quadrant": "Tools",
     "ring": "Assess/New"
   },
@@ -948,6 +1069,7 @@
       "telemetry"
     ],
     "name": "opentelemetry",
+    "link": "https://www.npmjs.com/package/opentelemetry",
     "quadrant": "Tools",
     "ring": "Trial/Possible"
   },
@@ -956,6 +1078,7 @@
       "telemetry"
     ],
     "name": "prom-client",
+    "link": "https://www.npmjs.com/package/prom-client",
     "quadrant": "Tools",
     "ring": "Assess/New"
   },
@@ -964,6 +1087,7 @@
       "telemetry"
     ],
     "name": "prometeus",
+    "link": "https://www.npmjs.com/package/prometeus",
     "quadrant": "Tools",
     "ring": "Assess/New"
   },
@@ -972,6 +1096,7 @@
       "test"
     ],
     "name": "jest",
+    "link": "https://www.npmjs.com/package/jest",
     "quadrant": "Tools",
     "ring": "Adopt/Proofed"
   },
@@ -980,6 +1105,7 @@
       "test"
     ],
     "name": "json-server",
+    "link": "https://www.npmjs.com/package/json-server",
     "quadrant": "Tools",
     "ring": "Adopt/Proofed"
   },
@@ -988,6 +1114,7 @@
       "test"
     ],
     "name": "newman",
+    "link": "https://www.npmjs.com/package/newman",
     "quadrant": "Tools",
     "ring": "Adopt/Proofed"
   },
@@ -996,6 +1123,7 @@
       "test"
     ],
     "name": "playwrite",
+    "link": "https://www.npmjs.com/package/playwrite",
     "quadrant": "Platforms",
     "ring": "Adopt/Proofed"
   },
@@ -1004,6 +1132,7 @@
       "test"
     ],
     "name": "postman",
+    "link": "https://www.npmjs.com/package/postman",
     "quadrant": "Tools",
     "ring": "Adopt/Proofed"
   },
@@ -1012,6 +1141,7 @@
       "test"
     ],
     "name": "puppeteer",
+    "link": "https://www.npmjs.com/package/puppeteer",
     "quadrant": "Tools",
     "ring": "Trial/Possible"
   },
@@ -1020,6 +1150,7 @@
       "test"
     ],
     "name": "testcafe",
+    "link": "https://www.npmjs.com/package/testcafe",
     "quadrant": "Tools",
     "ring": "Hold/Cancelled/Legacy"
   },
@@ -1028,7 +1159,8 @@
       "uikit"
     ],
     "name": "notistack",
-    "quadrant": "Language & Framework",
+    "link": "https://www.npmjs.com/package/notistack",
+    "quadrant": "Languages & Frameworks",
     "ring": "Adopt/Proofed"
   },
   {
@@ -1036,6 +1168,7 @@
       "transport"
     ],
     "name": "graphql-request",
+    "link": "https://www.npmjs.com/package/graphql-request",
     "quadrant": "Techniques",
     "ring": "Hold/Cancelled/Legacy"
   },
@@ -1044,6 +1177,7 @@
       "transport"
     ],
     "name": "rest",
+    "link": "https://www.npmjs.com/package/rest",
     "quadrant": "Techniques",
     "ring": "Adopt/Proofed"
   },
@@ -1061,126 +1195,155 @@
     ],
     "name": "StompJS",
     "quadrant": "Techniques",
-    "ring": "Hold/Cancelled/Legacy"
+    "ring": "Hold/Cancelled/Legacy",
+    "description": "StompJS is a JavaScript client implementing the STOMP protocol for messaging over WebSocket."
   },
   {
     "tags": [
       "transport"
     ],
     "name": "websocket",
+    "link": "https://www.npmjs.com/package/websocket",
     "quadrant": "Techniques",
-    "ring": "Assess/New"
+    "ring": "Assess/New",
+    "description": "WebSocket is a full‑duplex communication protocol enabling persistent real‑time client–server connections."
   },
   {
     "tags": [
       "uikit"
     ],
     "name": "@mui/material",
-    "quadrant": "Language & Framework",
-    "ring": "Adopt/Proofed"
+    "link": "https://www.npmjs.com/package/@mui/material",
+    "quadrant": "Languages & Frameworks",
+    "ring": "Adopt/Proofed",
+    "description": "MUI is a React component library implementing Material Design system components."
   },
   {
     "tags": [
       "uikit"
     ],
     "name": "AntDesign",
-    "quadrant": "Language & Framework",
-    "ring": "Hold/Cancelled/Legacy"
+    "quadrant": "Languages & Frameworks",
+    "ring": "Hold/Cancelled/Legacy",
+    "description": "Ant Design is an enterprise‑grade React UI component library with a comprehensive design system."
   },
   {
     "tags": [
       "uikit"
     ],
     "name": "country-flag-icons",
-    "quadrant": "Language & Framework",
-    "ring": "Assess/New"
+    "link": "https://www.npmjs.com/package/country-flag-icons",
+    "quadrant": "Languages & Frameworks",
+    "ring": "Assess/New",
+    "description": "country-flag-icons provides lightweight SVG/CSS flag icons for web applications."
   },
   {
     "tags": [
       "uikit"
     ],
     "name": "MUI",
-    "quadrant": "Language & Framework",
-    "ring": "Adopt/Proofed"
+    "quadrant": "Languages & Frameworks",
+    "ring": "Adopt/Proofed",
+    "description": "MUI is a React component library implementing Material Design system components."
   },
   {
     "tags": [
       "uikit"
     ],
     "name": "react-imask",
-    "quadrant": "Language & Framework",
-    "ring": "Adopt/Proofed"
+    "link": "https://www.npmjs.com/package/react-imask",
+    "quadrant": "Languages & Frameworks",
+    "ring": "Adopt/Proofed",
+    "description": "react-imask is a React wrapper for iMask providing input masking for text fields."
   },
   {
     "tags": [
       "uikit"
     ],
     "name": "react-number-format",
-    "quadrant": "Language & Framework",
-    "ring": "Adopt/Proofed"
+    "link": "https://www.npmjs.com/package/react-number-format",
+    "quadrant": "Languages & Frameworks",
+    "ring": "Adopt/Proofed",
+    "description": "react-number-format formats numeric inputs with masks, separators, and currency patterns for React."
   },
   {
     "tags": [
       "xss"
     ],
     "name": "isomorphic-dompurify",
-    "quadrant": "Language & Framework",
-    "ring": "Adopt/Proofed"
+    "link": "https://www.npmjs.com/package/isomorphic-dompurify",
+    "quadrant": "Languages & Frameworks",
+    "ring": "Adopt/Proofed",
+    "description": "isomorphic-dompurify sanitizes HTML on both client and server to prevent XSS."
   },
   {
     "tags": [
       "diagrams"
     ],
     "name": "pluntuml",
+    "link": "https://www.npmjs.com/package/pluntuml",
     "quadrant": "Tools",
-    "ring": "Adopt/Proofed"
+    "ring": "Adopt/Proofed",
+    "description": "plantuml (likely pluntuml) renders UML diagrams from plain‑text descriptions."
   },
   {
     "tags": [
       "IDE"
     ],
     "name": "webstorm",
+    "link": "https://www.npmjs.com/package/webstorm",
     "quadrant": "Tools",
-    "ring": "Trial/Possible"
+    "ring": "Trial/Possible",
+    "description": "WebStorm is JetBrains’s IDE for JavaScript, TypeScript, and modern web development."
   },
   {
     "tags": [
       "docker"
     ],
     "name": "docker",
+    "link": "https://www.npmjs.com/package/docker",
     "quadrant": "Platforms",
-    "ring": "Adopt/Proofed"
+    "ring": "Adopt/Proofed",
+    "description": "Docker is a containerization platform for packaging applications and dependencies into portable containers."
   },
   {
     "tags": [
       "docker"
     ],
     "name": "rancher desktop",
+    "link": "https://www.npmjs.com/package/rancher desktop",
     "quadrant": "Platforms",
-    "ring": "Assess/New"
+    "ring": "Assess/New",
+    "description": "Rancher Desktop is a local Kubernetes and container management environment for developers."
   },
   {
     "tags": [
       "docker"
     ],
     "name": "docker desktop",
+    "link": "https://www.npmjs.com/package/docker desktop",
     "quadrant": "Platforms",
-    "ring": "Hold/Cancelled/Legacy"
+    "ring": "Hold/Cancelled/Legacy",
+    "description": "Docker Desktop is a GUI tool for managing Docker containers and Kubernetes on local machines."
   },
   {
     "tags": [
       "docker"
     ],
     "name": "podman",
+    "link": "https://www.npmjs.com/package/podman",
     "quadrant": "Platforms",
-    "ring": "Assess/New"
+    "ring": "Assess/New",
+    "description": "Podman is a daemonless container engine compatible with Docker images and OCI standards."
   },
   {
     "tags": [
       "docker"
     ],
     "name": "kubernetes",
+    "link": "https://www.npmjs.com/package/kubernetes",
     "quadrant": "Platforms",
-    "ring": "Adopt/Proofed"
+    "ring": "Adopt/Proofed",
+    "description": "Kubernetes is an orchestration platform for deploying, scaling, and managing containerized applications."
   }
 ]
