@@ -8,6 +8,15 @@ interface ModalProps {
 }
 
 export const Legend: FC<ModalProps> = ({rings, quadrants}) => {
+    const downloadExcel = () => {
+        const link = document.createElement("a");
+        link.href = "techRadarSource.xlsx";
+        link.download = "techRadarSource.xlsx";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+    }
+
     return (
         <div
             style={{
@@ -59,6 +68,7 @@ export const Legend: FC<ModalProps> = ({rings, quadrants}) => {
                     ))}
                 </ul>
             </div>
+            <button onClick={downloadExcel}>Скачать в виде Excel</button>
         </div>
     );
 };
