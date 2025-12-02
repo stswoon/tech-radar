@@ -33,8 +33,8 @@ export const Radar: FC<RadarProps> = ({entries, rings, quadrants, width, height}
             }}
         >
             <svg
-                width={width}
-                height={height}
+                width={"100%"}
+                height={"100%"}
                 viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`}
                 style={{
                     border: "1px solid #eee",

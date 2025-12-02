@@ -8,6 +8,6 @@ interface TechRadarProps {
 
 export const TechRadar: FC<TechRadarProps> = ({config}) => {
     return (
-        <Radar rings={config.rings} quadrants={config.quadrants} entries={config.entries} height={100} width={500}/>
+        <Radar rings={config.rings} quadrants={config.quadrants} entries={config.entries} height={1000} width={1000}/>
     );
 };

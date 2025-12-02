@@ -14,11 +14,9 @@ const radarConfig: RadarConfig = {
 
 function App() {
     return (
-        <>
-            <div style={{padding: 24}}>
-                <TechRadar config={radarConfig}/>
-            </div>
-        </>
+        <div className="app" style={{padding: 24, height: "100vh"}}>
+            <TechRadar config={radarConfig}/>
+        </div>
     )
 }
 
