@@ -23,15 +23,7 @@ export const Radar: FC<RadarProps> = ({entries, rings, quadrants, width, height}
     );
 
     return (
-        <div
-            style={{
-                display: "grid",
-                gridTemplateColumns: "minmax(0, 2fr) minmax(260px, 1fr)",
-                gap: "16px",
-                alignItems: "start",
-                position: "relative",
-            }}
-        >
+        <div style={{height: "100%", display: "flex", gap: "16px"}}>
             <svg
                 width={"100%"}
                 height={"100%"}

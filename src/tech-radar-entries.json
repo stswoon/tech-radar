@@ -5,7 +5,8 @@
     ],
     "name": "chatgpt",
     "quadrant": "Tools",
-    "ring": "Adopt/Proofed"
+    "ring": "Adopt/Proofed",
+    "description": "Hello **world** !"
   },
   {
     "tags": [

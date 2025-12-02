@@ -18,7 +18,7 @@ export const Structure: FC<StructureProps> = ({rings, quadrants, width, height})
     const padding = 40;
     const maxRadius = viewBoxSize / 2 - padding;
 
-    const ringWidth = maxRadius / Math.max(rings.length, 1);
+    const ringWidth = maxRadius / (Math.max(rings.length, 1) + 1);
 
     const quadrantsWithAngles = useMemo(() => {
         return quadrantsWithAnglesUtil(quadrants);
@@ -27,20 +27,20 @@ export const Structure: FC<StructureProps> = ({rings, quadrants, width, height})
     return (
         <>
             {rings.map((ring, index) => {
-                const ringNumber = ringWidth * (index + 1);
+                const ringRadius = ringWidth * (index + 2);
                 return (
                     <g key={ring.name}>
                         <circle
                             cx={cx}
                             cy={cy}
-                            r={ringNumber}
+                            r={ringRadius}
                             fill="none"
                             stroke="#ddd"
                             strokeWidth={RING_LINE_WIDTH}
                         />
                         <text
                             x={cx}
-                            y={cy - ringNumber + 16}
+                            y={cy - ringRadius + 16}
                             textAnchor="middle"
                             fontSize={12}
                             fill="#666"
