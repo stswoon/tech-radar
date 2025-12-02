@@ -1,73 +1,22 @@
-# React + TypeScript + Vite
+# Tech Radar
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Этот код представляет собой веб-приложение Tech Radar (Технологический Радар), созданное для визуализации технологий, инструментов и платформ, которые используются или оцениваются в организации. Приложение построено на современном стеке веб-технологий.
 
-Currently, two official plugins are available:
+Исходник предствален в файле **public/techRadarSource.xlsx**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🛠 Технологический стек
+- Frontend: React (v19), TypeScript, Vite.
+- Обработка данных: Node.js (скрипты для конвертации данных), библиотека xlsx.
 
-## React Compiler
+### 🔄 Поток данных (Data Flow)
+Особенность проекта в том, что источником данных служит Excel-файл, что удобно для редактирования нетехническими специалистами.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Источник: Данные хранятся в файле **public/techRadarSource.xlsx**.
+- Конвертация: Скрипт xlsx-to-json.js читает Excel-файл и преобразует его в JSON ( src/tech-radar-entries.json ). Этот скрипт запускается автоматически перед стартом приложения ( npm run dev ) или сборкой ( npm run build ).
+- Отображение: React-компоненты ( src/components/TechRadar.tsx и др.) берут данные из JSON и отрисовывают интерактивный радар.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### 📂 Основная структура
+- src/App.tsx: Главный компонент, который собирает конфигурацию радара (кольца, квадранты, записи) и передает их в компонент визуализации.
+- src/tech-radar-structure.json : Конфигурация структуры радара (определение колец и квадрантов).
+- xlsx-to-json.js: Скрипт-утилита для обновления данных из Excel.
+По сути, это инструмент для генерации интерактивной карты технологий на основе простой Excel-таблицы.
