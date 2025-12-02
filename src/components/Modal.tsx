@@ -1,5 +1,8 @@
 import {type FC} from "react";
 import {type RadarEntry, type RadarQuadrant, type RadarRing} from "./types.ts";
+import MarkdownIt from "markdown-it";
+
+const md = new MarkdownIt();
 
 interface ModalProps {
     quadrants: RadarQuadrant[];
@@ -80,7 +83,12 @@ export const Modal: FC<ModalProps> = ({selectedItem, onClose, quadrants, rings})
                             </div>
 
                             {selectedItem.description && (
-                                <p style={{marginTop: 10}}>{selectedItem.description}</p>
+                                <div
+                                    style={{marginTop: 10}}
+                                    dangerouslySetInnerHTML={{
+                                        __html: md.render(selectedItem.description),
+                                    }}
+                                />
                             )}
                             {selectedItem.link && (
                                 <p style={{marginTop: 10}}>
