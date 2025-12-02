@@ -1,5 +1,6 @@
 import {type FC} from "react";
 import {type RadarQuadrant, type RadarRing} from "./types.ts";
+import {strings} from "./strings.ts";
 
 
 interface ModalProps {
@@ -18,57 +19,29 @@ export const Legend: FC<ModalProps> = ({rings, quadrants}) => {
     }
 
     return (
-        <div
-            style={{
-                padding: 12,
-                borderRadius: 8,
-                border: "1px solid #eee",
-                background: "#fff",
-                minWidth: "200px"
-            }}
-        >
-            <div
-                style={{
-                    fontSize: 13,
-                    fontWeight: 600,
-                    marginBottom: 8,
-                }}
-            >
-                Легенда
-            </div>
-            <div style={{fontSize: 12, color: "#444", lineHeight: 1.6}}>
-                <div>
-                    <b>Ринги:</b>
-                </div>
-                <ul style={{paddingLeft: 18, margin: "4px 0 8px"}}>
-                    {rings.map((r, idx) => (
-                        <li key={r.name}>
-                                <span
-                                    style={{
-                                        display: "inline-block",
-                                        width: 10,
-                                        height: 10,
-                                        borderRadius: "50%",
-                                        marginRight: 6,
-                                        backgroundColor: r.color,
-                                    }}
-                                />
-                            {idx + 1}. {r.name}
-                        </li>
-                    ))}
-                </ul>
-                <div>
-                    <b>Квадранты:</b>
-                </div>
-                <ul style={{paddingLeft: 18, margin: "4px 0 8px"}}>
-                    {quadrants.map((q, idx) => (
-                        <li key={q.name}>
-                            {idx + 1}. {q.name}
-                        </li>
-                    ))}
-                </ul>
-            </div>
-            <button onClick={downloadExcel}>Скачать в виде Excel</button>
+        <div className="legend">
+            <h2>{strings.legend}</h2>
+
+            <h4>{strings.rings}</h4>
+            <ul className="legend__ul-circle">
+                {rings.map((radarRings) => (
+                    <li key={radarRings.name}>
+                            <span className="legend__li-circle"
+                                  style={{backgroundColor: radarRings.color}}
+                            />
+                        <span>{radarRings.name}</span>
+                    </li>
+                ))}
+            </ul>
+
+            <h4>{strings.quadrants}</h4>
+            <ul className="legend__ul-circle">
+                {quadrants.map((radarQuadrant, idx) => (
+                    <li key={radarQuadrant.name}>{idx + 1}. {radarQuadrant.name}</li>
+                ))}
+            </ul>
+
+            <button onClick={downloadExcel}>{strings.downloadSource}</button>
         </div>
     );
 };

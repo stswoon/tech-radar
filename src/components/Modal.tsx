@@ -1,8 +1,7 @@
 import {type FC} from "react";
 import {type RadarEntry, type RadarQuadrant, type RadarRing} from "./types.ts";
-import MarkdownIt from "markdown-it";
-
-const md = new MarkdownIt();
+import {Markdown} from "./Markdown.tsx";
+import {strings} from "./strings.ts";
 
 interface ModalProps {
     quadrants: RadarQuadrant[];
@@ -14,123 +13,54 @@ interface ModalProps {
 export const Modal: FC<ModalProps> = ({selectedItem, onClose, quadrants, rings}) => {
     return (
         <>
-            {/* Модалка по клику */}
             {selectedItem && (
-                <div
-                    onClick={onClose}
-                    style={{
-                        position: "fixed",
-                        inset: 0,
-                        backgroundColor: "rgba(0,0,0,0.4)",
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        zIndex: 1000,
-                    }}
-                >
-                    <div
-                        onClick={(e) => e.stopPropagation()}
-                        style={{
-                            maxWidth: 480,
-                            width: "90%",
-                            background: "#fff",
-                            borderRadius: 12,
-                            boxShadow: "0 10px 30px rgba(0,0,0,0.2)",
-                            padding: 20,
-                            fontFamily: "system-ui, -apple-system, sans-serif",
-                        }}
-                    >
-                        <div
-                            style={{
-                                display: "flex",
-                                justifyContent: "space-between",
-                                alignItems: "center",
-                                marginBottom: 12,
-                            }}
-                        >
-                            <div
-                                style={{
-                                    fontSize: 16,
-                                    fontWeight: 600,
-                                    marginRight: 12,
-                                }}
-                            >
-                                {selectedItem.name}
-                            </div>
-                            <button
-                                onClick={onClose}
-                                style={{
-                                    border: "none",
-                                    background: "transparent",
-                                    fontSize: 18,
-                                    cursor: "pointer",
-                                    lineHeight: 1,
-                                }}
-                            >
-                                ×
-                            </button>
+                <div className="modal" onClick={onClose}>
+                    <div className="modal__inner" onClick={e => e.stopPropagation()}>
+
+                        <div className="modal__header">
+                            <div>{selectedItem.name}</div>
+                            <button className="link-button" onClick={onClose}>{strings.X}</button>
                         </div>
 
-                        <div style={{fontSize: 13, color: "#444", lineHeight: 1.5}}>
-                            {!!selectedItem.tags?.length && <div>
-                                <b>Tags:</b>{" "}
-                                {selectedItem.tags.join(", ")}
-                            </div>}
+                        <div className="modal__body">
+                            {!!selectedItem.tags?.length && (
+                                <div>
+                                    <b>{strings.tags}</b>{" "}
+                                    {selectedItem.tags.join(", ")}
+                                </div>
+                            )}
+
                             <div>
-                                <b>Квадрант:</b>{" "}
+                                <b>{strings.quadrant}</b>{" "}
                                 {quadrants.find((q) => q.name === selectedItem.quadrant)?.name}
                             </div>
+
                             <div>
-                                <b>Ринг:</b>{" "}
+                                <b>{strings.ring}</b>{" "}
                                 {rings.find((r) => r.name === selectedItem.ring)?.name}
                             </div>
 
                             {selectedItem.description && (
-                                <div
-                                    style={{marginTop: 10}}
-                                    dangerouslySetInnerHTML={{
-                                        __html: md.render(selectedItem.description),
-                                    }}
-                                />
+                                <div style={{marginTop: 10}}>
+                                    <Markdown text={selectedItem.description}/>
+                                </div>
                             )}
+
                             {selectedItem.link && (
-                                <p style={{marginTop: 10}}>
-                                    <a
-                                        href={selectedItem.link}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                    >
-                                        {selectedItem.link}
-                                    </a>
-                                </p>
+                                <div style={{marginTop: 10}}>
+                                    <a href={selectedItem.link} target="_blank">{selectedItem.link}</a>
+                                </div>
                             )}
+
                             {!selectedItem.description && !selectedItem.link && (
-                                <p style={{marginTop: 10, color: "#777"}}>
-                                    Описание не заполнено.
-                                </p>
+                                <div style={{marginTop: 10}}>{strings.noDescription}</div>
                             )}
                         </div>
 
-                        <div
-                            style={{
-                                marginTop: 18,
-                                textAlign: "right",
-                            }}
-                        >
-                            <button
-                                onClick={onClose}
-                                style={{
-                                    padding: "6px 14px",
-                                    borderRadius: 6,
-                                    border: "1px solid #ccc",
-                                    background: "#f5f5f5",
-                                    cursor: "pointer",
-                                    fontSize: 13,
-                                }}
-                            >
-                                Закрыть
-                            </button>
+                        <div className="modal__footer">
+                            <button className="normal-button" onClick={onClose}>{strings.close}</button>
                         </div>
+
                     </div>
                 </div>
             )}

@@ -1,27 +1,20 @@
 /* https://www.dev-notes.ru/articles/css/a-more-modern-css-reset/ */
 
-*,
-*::before,
-*::after {
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
 }
 
-ul,
-ol {
+ul, ol {
     list-style: none;
 }
 
-img,
-picture {
+img, picture {
     max-width: 100%;
     display: block;
 }
 
-input,
-button,
-textarea,
-select {
+input, button, textarea, select {
     font: inherit;
 }
 

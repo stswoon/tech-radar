@@ -81,16 +81,11 @@ export const Entries: FC<EntriesProps> = ({entries, quadrants, rings, width, hei
                         style={{cursor: "pointer"}}
                     >
                         <circle
-                            cx={x}
-                            cy={y}
-                            r={isHovered ? 8 : 6}
-                            fill={ringColor}
+                            cx={x} cy={y} r={isHovered ? 8 : 6} fill={ringColor}
                             stroke={isHovered ? "#000" : "#333"}
                             strokeWidth={isHovered ? 2 : 1}
                         />
-                        <text x={x + 10} y={y + 4} fontSize={11} fill="#333">
-                            {entry.name}
-                        </text>
+                        <text x={x + 10} y={y + 4} fontSize={11} fill="#333">{entry.name}</text>
                     </g>
                 );
             })}

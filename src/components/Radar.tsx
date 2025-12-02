@@ -13,41 +13,26 @@ interface RadarProps extends RadarConfig {
 }
 
 export const Radar: FC<RadarProps> = ({entries, rings, quadrants, width, height}) => {
-    const [selectedId, setSelectedId] = useState<string | null>(null);
+    const [selectedEntryName, setSelectedEntryName] = useState<string | null>(null);
 
     const viewBoxSize = Math.min(width, height);
 
     const selectedItem = useMemo(
-        () => entries.find((i) => i.name === selectedId),
-        [selectedId, entries]
+        () => entries.find((i) => i.name === selectedEntryName),
+        [selectedEntryName, entries]
     );
 
     return (
-        <div style={{height: "100%", display: "flex", gap: "16px"}}>
-            <svg
-                width={"100%"}
-                height={"100%"}
-                viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`}
-                style={{
-                    border: "1px solid #eee",
-                    borderRadius: 8,
-                    background: "#fafafa",
-                }}
-            >
+        <div className="radar">
+            <svg className="radar__svg" width={"100%"} height={"100%"}
+                 viewBox={`0 0 ${viewBoxSize} ${viewBoxSize}`}>
                 <Structure width={width} height={height} quadrants={quadrants} rings={rings}/>
                 <Entries width={width} height={height} quadrants={quadrants} rings={rings} entries={entries}
-                         onEntryClick={
-                             (entryName) => {
-                                 setSelectedId(entryName);
-                             }
-                         }
-                />
+                         onEntryClick={(entryName) => setSelectedEntryName(entryName)}/>
             </svg>
-
             <Legend rings={rings} quadrants={quadrants}/>
-
             <Modal quadrants={quadrants} rings={rings} selectedItem={selectedItem}
-                   onClose={() => setSelectedId(null)}/>
+                   onClose={() => setSelectedEntryName(null)}/>
         </div>
     );
 };

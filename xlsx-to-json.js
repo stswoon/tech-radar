@@ -12,6 +12,7 @@ const OUTPUT_FILE = path.join(__dirname, 'src/tech-radar-entries.json');
 console.log(`Reading file: ${INPUT_FILE}`);
 
 try {
+
     if (!fs.existsSync(INPUT_FILE)) {
         console.error(`Error: File not found: ${INPUT_FILE}`);
         process.exit(1);
