@@ -1,6 +1,6 @@
 import {type FC, useMemo} from "react";
 import {type RadarQuadrant, type RadarRing} from "./types.ts";
-import {QUADRANTS_WITH_ANGLE_LINE_WIDTH, RING_LINE_WIDTH} from "../const.ts";
+import {FIST_RING_COUNT, QUADRANTS_WITH_ANGLE_LINE_WIDTH, RING_LINE_WIDTH} from "./const.ts";
 import {quadrantsWithAnglesUtil} from "./utils.ts";
 
 
@@ -17,7 +17,7 @@ export const Structure: FC<StructureProps> = ({rings, quadrants, width, height})
     const cy = viewBoxSize / 2;
     const padding = 40;
     const maxRadius = viewBoxSize / 2 - padding;
-    const ringWidth = maxRadius / (Math.max(rings.length, 1) + 1);
+    const ringWidth = maxRadius / (rings.length + FIST_RING_COUNT - 1);
 
     const quadrantsWithAngles = useMemo(() => {
         return quadrantsWithAnglesUtil(quadrants);
@@ -26,7 +26,7 @@ export const Structure: FC<StructureProps> = ({rings, quadrants, width, height})
     return (
         <>
             {rings.map((ring, index) => {
-                const ringRadius = ringWidth * (index + 2);
+                const ringRadius = ringWidth * (index + FIST_RING_COUNT);
                 return (
                     <g key={ring.name}>
                         <circle cx={cx} cy={cy} r={ringRadius} fill="none" stroke="#ddd" strokeWidth={RING_LINE_WIDTH}/>

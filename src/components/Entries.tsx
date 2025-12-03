@@ -1,6 +1,7 @@
 import {type FC, useMemo, useState} from "react";
 import {type RadarEntry, type RadarQuadrant, type RadarRing} from "./types.ts";
 import {hashStringToUnit, quadrantsWithAnglesUtil} from "./utils.ts";
+import {FIST_RING_COUNT} from "./const.ts";
 
 interface EntriesProps {
     quadrants: RadarQuadrant[];
@@ -18,7 +19,7 @@ export const Entries: FC<EntriesProps> = ({entries, quadrants, rings, width, hei
     const padding = 40;
     const maxRadius = viewBoxSize / 2 - padding;
 
-    const ringWidth = maxRadius / (Math.max(rings.length, 1) + 1);
+    const ringWidth = maxRadius / (rings.length + FIST_RING_COUNT - 1);
 
     const [hoveredId, setHoveredId] = useState<string | null>(null);
 
@@ -48,7 +49,7 @@ export const Entries: FC<EntriesProps> = ({entries, quadrants, rings, width, hei
                     return null;
                 }
 
-                const outerRingIndex = ringIndex + 2;
+                const outerRingIndex = ringIndex + FIST_RING_COUNT;
                 let innerRingIndex = outerRingIndex - 1;
                 if (ringIndex == 0) {
                     innerRingIndex = 0;

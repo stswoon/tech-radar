@@ -57,6 +57,18 @@
     text-align: right;
 }
 
+.radar {
+    height: 100%;
+    display: flex;
+    gap: 16px;
+}
+
+.radar__svg {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
 .link-button {
     border: none;
     background: transparent;
@@ -70,16 +82,4 @@
     background: #f5f5f5;
     cursor: pointer;
     font-size: 13px;
-}
-
-.radar {
-    height: 100%;
-    display: flex;
-    gap: 16px;
-}
-
-.radar__svg {
-    border: 1px solid #eee;
-    border-radius: 8px;
-    background: #fafafa;
 }
