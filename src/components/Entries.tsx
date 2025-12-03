@@ -32,8 +32,7 @@ export const Entries: FC<EntriesProps> = ({entries, quadrants, rings, width, hei
 
     const getRingIndex = (ring: string | undefined) => {
         if (!ring) {
-            return -1;
-            //TODO
+            return -1; //TODO
         }
         return rings.findIndex((r) => r.name === ring);
     }
@@ -57,14 +56,16 @@ export const Entries: FC<EntriesProps> = ({entries, quadrants, rings, width, hei
                 const innerRadius = ringWidth * innerRingIndex;
                 const outerRadius = ringWidth * outerRingIndex;
 
-                const seed = hashStringToUnit(entry.name);
-                const seed2 = hashStringToUnit(entry.name + "_2");
+                //const s = entry.name;
+                const s = JSON.stringify(entry);
+                const seed1 = hashStringToUnit(s);
+                const seed2 = hashStringToUnit(s + "_2");
 
                 const angle =
                     (quadrant.startAngle + 0.05) +
-                    ((quadrant.endAngle - 0.05) - quadrant.startAngle) * seed;
+                    (quadrant.endAngle - quadrant.startAngle - 0.05) * seed1;
                 const radius =
-                    innerRadius + (outerRadius - innerRadius) * (0.15 + 0.7 * seed2);
+                    innerRadius + (outerRadius - innerRadius) * (0.1 + 0.85 * seed2);
 
                 const x = cx + radius * Math.cos(angle);
                 const y = cy + radius * Math.sin(angle);
