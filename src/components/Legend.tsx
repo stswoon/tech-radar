@@ -1,4 +1,4 @@
-import {type FC} from "react";
+import {useCallback, useState, type FC} from "react";
 import {type RadarQuadrant, type RadarRing} from "./types.ts";
 import {strings} from "./strings.ts";
 
@@ -6,9 +6,10 @@ import {strings} from "./strings.ts";
 interface ModalProps {
     quadrants: RadarQuadrant[];
     rings: RadarRing[];
+    onZoom: (enable: boolean) => void;
 }
 
-export const Legend: FC<ModalProps> = ({rings, quadrants}) => {
+export const Legend: FC<ModalProps> = ({rings, quadrants, onZoom}) => {
     const downloadExcel = () => {
         const link = document.createElement("a");
         link.href = "techRadarSource.xlsx";
@@ -17,6 +18,13 @@ export const Legend: FC<ModalProps> = ({rings, quadrants}) => {
         link.click();
         document.body.removeChild(link);
     }
+
+    const [zoom, setZoom] = useState<boolean>(false);
+
+    const handleZoomClick = useCallback(() => {
+        setZoom(!zoom);
+        onZoom(!zoom);
+    }, [onZoom, zoom])
 
     return (
         <div className="legend">
@@ -41,7 +49,10 @@ export const Legend: FC<ModalProps> = ({rings, quadrants}) => {
                 ))}
             </ul>
 
-            <button onClick={downloadExcel}>{strings.downloadSource}</button>
+            <button className="normal-button" onClick={downloadExcel}>{strings.downloadSource}</button>
+
+            <button className="normal-button"
+                    onClick={handleZoomClick}>{zoom ? strings.zoomOut : strings.zoomIn}</button>
         </div>
     );
 };
