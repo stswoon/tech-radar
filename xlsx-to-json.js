@@ -27,12 +27,16 @@ try {
     // Convert sheet to JSON
     // header: 0 means use the first row as keys
     let data = XLSX.utils.sheet_to_json(sheet, { header: 0 });
+    // console.log("data[1]", data[1])
+    data = data.filter(entry => entry.hide !== "true");
     const originalLen = data.length;
     console.log(`Found ${originalLen} entries.`);
     data = data.filter(entry => !!entry.name && !!entry.ring && !!entry.quadrant);
     console.log(`Found ${data.length} entries with ring and quadrant.`);
     if (originalLen !== data.length) {
-        console.error("Possible ERROR - some entries are skipped")
+        const s = "ERROR: some entries do not have quadrant and/or ring";
+        console.error(s);
+        throw new Error(s)
     }
 
     data.forEach(entry => {
@@ -42,7 +46,6 @@ try {
     });
 
     const jsonContent = JSON.stringify(data, null, 2);
-
 
     fs.writeFileSync(OUTPUT_FILE, jsonContent, 'utf8');
     console.log(`Successfully wrote data to: ${OUTPUT_FILE}`);
