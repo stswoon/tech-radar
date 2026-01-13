@@ -13,8 +13,8 @@ interface StructureProps {
 
 export const Structure: FC<StructureProps> = ({rings, quadrants, width, height}) => {
     const viewBoxSize = Math.min(width, height);
-    const cx = viewBoxSize / 2;
-    const cy = viewBoxSize / 2;
+    const cx = width / 2;
+    const cy = height / 2;
     const padding = 40;
     const maxRadius = viewBoxSize / 2 - padding;
     const ringWidth = maxRadius / (rings.length + FIST_RING_COUNT - 1);

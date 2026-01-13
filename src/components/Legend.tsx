@@ -7,13 +7,15 @@ interface ModalProps {
     quadrants: RadarQuadrant[];
     rings: RadarRing[];
     onZoom: (enable: boolean) => void;
+    configType: "dev" | "sa"
 }
 
-export const Legend: FC<ModalProps> = ({rings, quadrants, onZoom}) => {
+export const Legend: FC<ModalProps> = ({rings, quadrants, onZoom, configType}) => {
     const downloadExcel = () => {
         const link = document.createElement("a");
-        link.href = "techRadarSource.xlsx";
-        link.download = "techRadarSource.xlsx";
+        const name = `techRadarSource${configType === "dev" ? "Dev" : "Sa"}.xlsx`
+        link.href = name;
+        link.download = name;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -49,10 +51,10 @@ export const Legend: FC<ModalProps> = ({rings, quadrants, onZoom}) => {
                 ))}
             </ul>
 
-            <button className="normal-button" onClick={downloadExcel}>{strings.downloadSource}</button>
-
             <button className="normal-button"
                     onClick={handleZoomClick}>{zoom ? strings.zoomOut : strings.zoomIn}</button>
+
+            <button className="normal-button" onClick={downloadExcel}>{strings.downloadSource}</button>
         </div>
     );
 };

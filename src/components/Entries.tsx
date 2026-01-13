@@ -14,8 +14,8 @@ interface EntriesProps {
 
 export const Entries: FC<EntriesProps> = ({entries, quadrants, rings, width, height, onEntryClick}) => {
     const viewBoxSize = Math.min(width, height);
-    const cx = viewBoxSize / 2;
-    const cy = viewBoxSize / 2;
+    const cx = width / 2;
+    const cy = height / 2;
     const padding = 40;
     const maxRadius = viewBoxSize / 2 - padding;
 
