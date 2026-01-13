@@ -1,15 +1,15 @@
 import './App.css'
 
-import radarStructure from "./tech-radar-structure.json";
-import radarEntries from "./tech-radar-entries.json";
+import radarDataDev from "./tech-radar-dev.json";
+import radarDataSa from "./tech-radar-sa.json";
 
 import {TechRadar} from "./components";
 import type {RadarConfig, RadarEntry, RadarQuadrant, RadarRing} from "./components";
 
 const radarConfig: RadarConfig = {
-    rings: radarStructure.rings as RadarRing[],
-    quadrants: radarStructure.quadrants as RadarQuadrant[],
-    entries: radarEntries as RadarEntry[]
+    rings: radarDataDev.rings as RadarRing[],
+    quadrants: radarDataDev.quadrants as RadarQuadrant[],
+    entries: radarDataDev.entries as RadarEntry[]
 };
 
 function App() {

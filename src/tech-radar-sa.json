@@ -1,0 +1,240 @@
+{
+  "quadrants": [
+    {
+      "name": "Techniques"
+    },
+    {
+      "name": "Tools"
+    },
+    {
+      "name": "Frameworks"
+    }
+  ],
+  "rings": [
+    {
+      "name": "Adopt/Proofed",
+      "color": "#2e7d32",
+      "description": "технологии, которые активно используются в проектах."
+    },
+    {
+      "name": "Assess/New",
+      "color": "#f9a825",
+      "description": "технологии, к которым компания ещё присматривается."
+    },
+    {
+      "name": "Hold/Cancelled/Legacy",
+      "color": "#c62828",
+      "description": "морально устаревшие технологии или решения, которые себя не оправдали на практике."
+    }
+  ],
+  "entries": [
+    {
+      "tags": [
+        "ai"
+      ],
+      "name": "chatgpt",
+      "link": "https://www.npmjs.com/package/chatgpt",
+      "quadrant": "Tools",
+      "ring": "Adopt/Proofed",
+      "description": "ChatGPT is OpenAI’s large‑language‑model API providing text and multimodal generation capabilities."
+    },
+    {
+      "tags": [
+        "ai"
+      ],
+      "name": "claude",
+      "link": "https://www.npmjs.com/package/claude",
+      "quadrant": "Tools",
+      "ring": "Assess/New",
+      "description": "Claude is Anthropic’s AI assistant API focused on safe, steerable large‑language‑model interactions."
+    },
+    {
+      "tags": [
+        "ai"
+      ],
+      "name": "gemini",
+      "link": "https://www.npmjs.com/package/gemini",
+      "quadrant": "Tools",
+      "ring": "Assess/New",
+      "description": "Gemini is Google’s multimodal LLM platform providing text, vision, and code generation APIs."
+    },
+    {
+      "tags": [
+        "architecture"
+      ],
+      "name": "microfrontends",
+      "link": "https://www.npmjs.com/package/microfrontends",
+      "quadrant": "Techniques",
+      "ring": "Assess/New",
+      "description": "Microfrontends is an architectural style where the UI is split into independently deployable frontend modules."
+    },
+    {
+      "tags": [
+        "architecture"
+      ],
+      "name": "modulefederation",
+      "link": "https://www.npmjs.com/package/modulefederation",
+      "quadrant": "Techniques",
+      "ring": "Assess/New",
+      "description": "Webpack Module Federation enables runtime code sharing between separately built JavaScript bundles."
+    },
+    {
+      "tags": [
+        "architecture"
+      ],
+      "name": "openspec first",
+      "link": "https://www.npmjs.com/package/openspec first",
+      "quadrant": "Techniques",
+      "ring": "Adopt/Proofed",
+      "description": "Technology description from official documentation is not yet defined."
+    },
+    {
+      "tags": [
+        "CMS"
+      ],
+      "name": "Strapi",
+      "link": "https://strapi.io/",
+      "quadrant": "Frameworks",
+      "ring": "Assess/New",
+      "description": "Strapi — open-source headless CMS на Node.js для быстрого создания и управления API с красивой панелью админки, поддержкой коллекций, а также многослойной локализации контента."
+    },
+    {
+      "tags": [
+        "diagrams"
+      ],
+      "name": "drawio",
+      "link": "https://www.npmjs.com/package/drawio",
+      "quadrant": "Tools",
+      "ring": "Hold/Cancelled/Legacy",
+      "description": "Редактор диаграмм draw.io/diagrams.net."
+    },
+    {
+      "tags": [
+        "diagrams"
+      ],
+      "name": "pluntuml",
+      "link": "https://www.npmjs.com/package/pluntuml",
+      "quadrant": "Tools",
+      "ring": "Adopt/Proofed",
+      "description": "plantuml (likely pluntuml) renders UML diagrams from plain‑text descriptions."
+    },
+    {
+      "tags": [
+        "docker"
+      ],
+      "name": "docker",
+      "link": "https://www.npmjs.com/package/docker",
+      "quadrant": "Frameworks",
+      "ring": "Adopt/Proofed",
+      "description": "Docker is a containerization platform for packaging applications and dependencies into portable containers."
+    },
+    {
+      "tags": [
+        "docker"
+      ],
+      "name": "kubernetes",
+      "link": "https://www.npmjs.com/package/kubernetes",
+      "quadrant": "Frameworks",
+      "ring": "Adopt/Proofed",
+      "description": "Kubernetes is an orchestration platform for deploying, scaling, and managing containerized applications."
+    },
+    {
+      "tags": [
+        "docs"
+      ],
+      "name": "dynosareus",
+      "link": "https://www.npmjs.com/package/dynosareus",
+      "quadrant": "Tools",
+      "ring": "Assess/New"
+    },
+    {
+      "tags": [
+        "docs"
+      ],
+      "name": "markdown",
+      "link": "https://www.npmjs.com/package/markdown",
+      "quadrant": "Techniques",
+      "ring": "Adopt/Proofed"
+    },
+    {
+      "tags": [
+        "docs"
+      ],
+      "name": "typedoc",
+      "link": "https://www.npmjs.com/package/typedoc",
+      "quadrant": "Techniques",
+      "ring": "Assess/New",
+      "description": "TypeDoc — инструмент для генерации документации из TypeScript-комментариев и типов."
+    },
+    {
+      "tags": [
+        "ide"
+      ],
+      "name": "cursor",
+      "link": "https://www.npmjs.com/package/cursor",
+      "quadrant": "Tools",
+      "ring": "Assess/New",
+      "description": "Современный AI-редактор"
+    },
+    {
+      "tags": [
+        "open-api"
+      ],
+      "name": "swagger",
+      "link": "https://www.npmjs.com/package/swagger",
+      "quadrant": "Techniques",
+      "ring": "Adopt/Proofed",
+      "description": "Суит инструментов для проектирования, документирования и тестирования REST-API (на основе OpenAPI)."
+    },
+    {
+      "tags": [
+        "performance"
+      ],
+      "name": "lighthouse",
+      "link": "https://www.npmjs.com/package/lighthouse",
+      "quadrant": "Techniques",
+      "ring": "Adopt/Proofed",
+      "description": "CLI-инструмент от Google для аудита качества веб-страниц — скорость, доступность, SEO, PWA и лучшие практики. Выдает отчёт с метриками и рекомендациями."
+    },
+    {
+      "tags": [
+        "transport"
+      ],
+      "name": "rest",
+      "link": "https://www.npmjs.com/package/rest",
+      "quadrant": "Techniques",
+      "ring": "Adopt/Proofed",
+      "description": "REST как архитектурный стиль — это способ проектирования API, основанный на HTTP-методах и ресурсах (нет конкретного npm-пакета под это имя)."
+    },
+    {
+      "tags": [
+        "transport"
+      ],
+      "name": "SSE",
+      "link": "https://developer.mozilla.org/ru/docs/Web/API/Server-sent_events",
+      "quadrant": "Techniques",
+      "ring": "Hold/Cancelled/Legacy",
+      "description": "Традиционно веб-страница должна отправить запрос на сервер для получения новых данных, то есть страница запрашивает данные с сервера. Благодаря технологии отправляемых сервером событий (англ. Server-sent events) сервер может отправлять новые данные на веб-страницу в любое время с помощью сообщений. Внутри веб-страницы такие входящие сообщения можно рассматривать как связку «Событие + данные»."
+    },
+    {
+      "tags": [
+        "transport"
+      ],
+      "name": "websocket",
+      "link": "https://www.npmjs.com/package/websocket",
+      "quadrant": "Techniques",
+      "ring": "Hold/Cancelled/Legacy",
+      "description": "WebSocket is a full‑duplex communication protocol enabling persistent real‑time client–server connections."
+    },
+    {
+      "tags": [
+        "xss"
+      ],
+      "name": "@mui/material",
+      "link": "https://www.npmjs.com/package/@mui/material",
+      "quadrant": "Frameworks",
+      "ring": "Adopt/Proofed",
+      "description": "MUI is a React component library implementing Material Design system components."
+    }
+  ]
+}

@@ -62,8 +62,8 @@ export const Entries: FC<EntriesProps> = ({entries, quadrants, rings, width, hei
                 const seed2 = hashStringToUnit(s + "_2");
 
                 const angle =
-                    (quadrant.startAngle + 0.05) +
-                    (quadrant.endAngle - quadrant.startAngle - 0.05) * seed1;
+                    (quadrant.startAngle + 0.1) +
+                    (quadrant.endAngle - quadrant.startAngle - 0.1) * seed1;
                 const radius =
                     innerRadius + (outerRadius - innerRadius) * (0.1 + 0.85 * seed2);
 
