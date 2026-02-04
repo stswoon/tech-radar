@@ -21,3 +21,15 @@ export const quadrantsWithAnglesUtil = (quadrants: RadarQuadrant[]) => {
         endAngle: (index + 1) * angleStep,
     }));
 };
+
+/**
+ * Сравнивает два вещественных числа с заданной точностью.
+ * @param a Первое число.
+ * @param b Второе число.
+ * @param precision Точность сравнения (количество знаков после запятой). По умолчанию 3.
+ * @returns true, если числа равны с заданной точностью, иначе false.
+ */
+export const isApproximatelyEqual = (a: number, b: number, precision: number = 3): boolean => {
+    const factor = Math.pow(10, precision);
+    return Math.round(a * factor) === Math.round(b * factor);
+};

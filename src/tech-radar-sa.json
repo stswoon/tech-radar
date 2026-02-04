@@ -8,6 +8,9 @@
     },
     {
       "name": "Frameworks"
+    },
+    {
+      "name": "Patterns"
     }
   ],
   "rings": [
@@ -60,42 +63,12 @@
     },
     {
       "tags": [
-        "architecture"
-      ],
-      "name": "microfrontends",
-      "link": "https://www.npmjs.com/package/microfrontends",
-      "quadrant": "Techniques",
-      "ring": "Assess/New",
-      "description": "Microfrontends is an architectural style where the UI is split into independently deployable frontend modules."
-    },
-    {
-      "tags": [
-        "architecture"
-      ],
-      "name": "modulefederation",
-      "link": "https://www.npmjs.com/package/modulefederation",
-      "quadrant": "Techniques",
-      "ring": "Assess/New",
-      "description": "Webpack Module Federation enables runtime code sharing between separately built JavaScript bundles."
-    },
-    {
-      "tags": [
-        "architecture"
-      ],
-      "name": "openspec first",
-      "link": "https://www.npmjs.com/package/openspec first",
-      "quadrant": "Techniques",
-      "ring": "Adopt/Proofed",
-      "description": "Technology description from official documentation is not yet defined."
-    },
-    {
-      "tags": [
         "CMS"
       ],
       "name": "Strapi",
       "link": "https://strapi.io/",
       "quadrant": "Frameworks",
-      "ring": "Assess/New",
+      "ring": "Adopt/Proofed",
       "description": "Strapi — open-source headless CMS на Node.js для быстрого создания и управления API с красивой панелью админки, поддержкой коллекций, а также многослойной локализации контента."
     },
     {
@@ -105,7 +78,7 @@
       "name": "drawio",
       "link": "https://www.npmjs.com/package/drawio",
       "quadrant": "Tools",
-      "ring": "Hold/Cancelled/Legacy",
+      "ring": "Adopt/Proofed",
       "description": "Редактор диаграмм draw.io/diagrams.net."
     },
     {
@@ -120,41 +93,12 @@
     },
     {
       "tags": [
-        "docker"
-      ],
-      "name": "docker",
-      "link": "https://www.npmjs.com/package/docker",
-      "quadrant": "Frameworks",
-      "ring": "Adopt/Proofed",
-      "description": "Docker is a containerization platform for packaging applications and dependencies into portable containers."
-    },
-    {
-      "tags": [
-        "docker"
-      ],
-      "name": "kubernetes",
-      "link": "https://www.npmjs.com/package/kubernetes",
-      "quadrant": "Frameworks",
-      "ring": "Adopt/Proofed",
-      "description": "Kubernetes is an orchestration platform for deploying, scaling, and managing containerized applications."
-    },
-    {
-      "tags": [
         "docs"
       ],
       "name": "dynosareus",
       "link": "https://www.npmjs.com/package/dynosareus",
       "quadrant": "Tools",
       "ring": "Assess/New"
-    },
-    {
-      "tags": [
-        "docs"
-      ],
-      "name": "markdown",
-      "link": "https://www.npmjs.com/package/markdown",
-      "quadrant": "Techniques",
-      "ring": "Adopt/Proofed"
     },
     {
       "tags": [
@@ -200,7 +144,7 @@
       "tags": [
         "transport"
       ],
-      "name": "rest",
+      "name": "REST API",
       "link": "https://www.npmjs.com/package/rest",
       "quadrant": "Techniques",
       "ring": "Adopt/Proofed",
@@ -235,6 +179,126 @@
       "quadrant": "Frameworks",
       "ring": "Adopt/Proofed",
       "description": "MUI is a React component library implementing Material Design system components."
+    },
+    {
+      "tags": [
+        "architecture"
+      ],
+      "name": "Contract-First (API-First)",
+      "link": "https://swagger.io/resources/articles/adopting-an-api-first-approach/",
+      "quadrant": "Patterns",
+      "ring": "Assess/New",
+      "description": "API-first подход в разработке программного обеспечения — это стратегия, при которой проектирование и создание программных интерфейсов (API) происходит на начальной стадии разработки, прежде чем будут реализованы другие компоненты системы. "
+    },
+    {
+      "tags": [
+        "ai"
+      ],
+      "name": "AlfaGen",
+      "link": "https://confluence.moscow.alfaintra.net/pages/viewpage.action?pageId=1473671047",
+      "quadrant": "Tools",
+      "ring": "Assess/New",
+      "description": "AlfaGen -  это платформа, разработанная в Банке, которая позволяет создавать новые клиентские пути и новый UX для продуктов Банка с использованием генеративного ИИ, а также помогает сотрудникам ускорять рабочие процессы (поиск, анализ, документация, разработка кода, тестирование, автоматизация рутины), и все это при соблюдении требований безопасности и комплаенса.\r\n"
+    },
+    {
+      "tags": [
+        "database"
+      ],
+      "name": "PostgreSQL",
+      "link": "https://www.postgresql.org/",
+      "quadrant": "Techniques",
+      "ring": "Adopt/Proofed",
+      "description": "PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance."
+    },
+    {
+      "tags": [
+        "database"
+      ],
+      "name": "Redis",
+      "link": "https://redis.io/",
+      "quadrant": "Frameworks",
+      "ring": "Adopt/Proofed",
+      "description": "Redis — нереляционная NoSQL-система управления базами данных (СУБД) с открытым исходным кодом."
+    },
+    {
+      "tags": [
+        "database"
+      ],
+      "name": "mongoDB",
+      "link": "https://www.mongodb.com/?version=latest",
+      "quadrant": "Frameworks",
+      "ring": "Adopt/Proofed",
+      "description": "MongoDB — это популярная NoSQL СУБД, или система управления базами данных, которая предназначена для хранения больших объемов данных в формате документов."
+    },
+    {
+      "tags": [
+        "transport"
+      ],
+      "name": "Apache Kafka",
+      "link": "https://kafka.apache.org/",
+      "quadrant": "Frameworks",
+      "ring": "Adopt/Proofed",
+      "description": "Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration"
+    },
+    {
+      "tags": [
+        "auth"
+      ],
+      "name": "Zitadel",
+      "link": "https://confluence.moscow.alfaintra.net/display/PLA/Zitadel",
+      "quadrant": "Techniques",
+      "ring": "Adopt/Proofed",
+      "description": "ZITADEL is the identity infrastructure platform that is built for developers and works for all users and applications."
+    },
+    {
+      "tags": [
+        "database"
+      ],
+      "name": "Apache Cassandra",
+      "link": "https://cassandra.apache.org/_/index.html",
+      "quadrant": "Techniques",
+      "ring": "Adopt/Proofed",
+      "description": "Apache Cassandra is an open source NoSQL distributed database trusted by thousands of companies for scalability and high availability without compromising performance."
+    },
+    {
+      "tags": [
+        "database"
+      ],
+      "name": "ElasticSearch",
+      "link": "https://www.elastic.co/elasticsearch",
+      "quadrant": "Techniques",
+      "ring": "Adopt/Proofed",
+      "description": "Elasticsearch is the leading distributed, RESTful, open source search and analytics engine designed for speed, horizontal scalability, reliability, and easy management. Get started for free"
+    },
+    {
+      "tags": [
+        "workflow"
+      ],
+      "name": "Temporal",
+      "link": "https://temporal.io/",
+      "quadrant": "Frameworks",
+      "ring": "Assess/New",
+      "description": "Temporal — открытая платформа для создания надёжных распределённых приложений. Она решает одну из ключевых проблем современной разработки: как гарантировать выполнение критически важных процессов в нестабильной среде"
+    },
+    {
+      "tags": [
+        "auth"
+      ],
+      "name": "Keycloak",
+      "link": "https://www.keycloak.org/",
+      "quadrant": "Frameworks",
+      "ring": "Adopt/Proofed",
+      "description": "Keycloak provides user federation, strong authentication, user management, fine-grained authorization, and more."
+    },
+    {
+      "tags": [
+        "architecture"
+      ],
+      "name": "BFF",
+      "link": "https://confluence.moscow.alfaintra.net/pages/viewpage.action?pageId=2769517393",
+      "quadrant": "Patterns",
+      "ring": "Adopt/Proofed",
+      "description": " архитектурный шаблон, при котором для каждого типа устройства или интерфейса создаётся специальный API-шлюз. Например, можно создать отдельные BFF для браузеров, мобильных приложений или публичных/партнёрских API. "
     }
   ]
 }
