@@ -47,17 +47,27 @@
       "name": "@langchain/openai",
       "link": "https://www.npmjs.com/package/@langchain/openai",
       "quadrant": "Tools",
-      "ring": "Trial/Possible",
+      "ring": "Assess/New",
       "description": "LangChain OpenAI package provides LangChain integrations for invoking OpenAI models via unified chains and agents."
     },
     {
       "tags": [
         "ai"
       ],
-      "name": "chatgpt",
-      "link": "https://www.npmjs.com/package/chatgpt",
+      "name": "alfagen",
+      "link": "https://alfagen.moscow.alfaintra.net/",
       "quadrant": "Tools",
       "ring": "Trial/Possible",
+      "description": "Аналог ChatGPT"
+    },
+    {
+      "tags": [
+        "ai"
+      ],
+      "name": "chatgpt",
+      "link": "https://chatgpt.com/",
+      "quadrant": "Tools",
+      "ring": "Assess/New",
       "description": "ChatGPT is OpenAI’s large‑language‑model API providing text and multimodal generation capabilities."
     },
     {
@@ -94,8 +104,8 @@
       "tags": [
         "architecture"
       ],
-      "name": "openspec first",
-      "link": "https://www.npmjs.com/package/openspec first",
+      "name": "open api spec first",
+      "link": "https://swagger.io/resources/articles/adopting-an-api-first-approach/",
       "quadrant": "Techniques",
       "ring": "Adopt/Proofed",
       "description": "Technology description from official documentation is not yet defined."
@@ -124,10 +134,20 @@
       "tags": [
         "build system"
       ],
+      "name": "pnpm",
+      "link": "https://www.npmjs.com/package/pnpm",
+      "quadrant": "Tools",
+      "ring": "Trial/Possible",
+      "description": "More speed and support workplaces from scratch"
+    },
+    {
+      "tags": [
+        "build system"
+      ],
       "name": "yarn",
       "link": "https://www.npmjs.com/package/yarn",
       "quadrant": "Tools",
-      "ring": "Hold/Cancelled/Legacy",
+      "ring": "Adopt/Proofed",
       "description": "Yarn — это популярный, быстрый и надёжный менеджер пакетов для JavaScript (альтернатива npm), который помогает устанавливать, обновлять и управлять зависимостями в проектах Node.js и веб-экосистеме."
     },
     {
@@ -154,6 +174,16 @@
       "tags": [
         "bundler"
       ],
+      "name": "turbopack",
+      "link": "https://nextjs.org/docs/app/api-reference/turbopack",
+      "quadrant": "Tools",
+      "ring": "Trial/Possible",
+      "description": "Turbopack is an incremental bundler optimized for JavaScript and TypeScript, written in Rust, and built into Next.js. You can use Turbopack with both the Pages and App Router for a much faster local development experience."
+    },
+    {
+      "tags": [
+        "bundler"
+      ],
       "name": "webpack",
       "link": "https://www.npmjs.com/package/webpack",
       "quadrant": "Tools",
@@ -167,7 +197,7 @@
       "name": "gitlab-ci",
       "link": "https://www.npmjs.com/package/gitlab-ci",
       "quadrant": "Platforms",
-      "ring": "Trial/Possible",
+      "ring": "Adopt/Proofed",
       "description": "GitLab-CI — инструмент/пакет для интеграции GitLab CI/CD, обеспечивающий автоматизацию сборки, тестирования и деплоя через GitLab pipeline-файлы."
     },
     {
@@ -182,7 +212,8 @@
     },
     {
       "tags": [
-        "codegen"
+        "codegen",
+        "mock"
       ],
       "name": "orval",
       "link": "https://www.npmjs.com/package/orval",
@@ -215,19 +246,29 @@
         "diagrams"
       ],
       "name": "drawio",
-      "link": "https://www.npmjs.com/package/drawio",
+      "link": "https://www.drawio.com/",
       "quadrant": "Tools",
-      "ring": "Trial/Possible",
+      "ring": "Adopt/Proofed",
       "description": "Редактор диаграмм draw.io/diagrams.net."
     },
     {
       "tags": [
         "diagrams"
       ],
-      "name": "pluntuml",
-      "link": "https://www.npmjs.com/package/pluntuml",
+      "name": "miro",
+      "link": "https://miro.com",
       "quadrant": "Tools",
       "ring": "Adopt/Proofed",
+      "description": "Miro provides a visual workspace for innovation that enables distributed teams of any size to dream, design, and build the future together"
+    },
+    {
+      "tags": [
+        "diagrams"
+      ],
+      "name": "pluntuml",
+      "link": "https://plantuml.com",
+      "quadrant": "Tools",
+      "ring": "Trial/Possible",
       "description": "plantuml (likely pluntuml) renders UML diagrams from plain‑text descriptions."
     },
     {
@@ -235,7 +276,7 @@
         "docker"
       ],
       "name": "docker",
-      "link": "https://www.npmjs.com/package/docker",
+      "link": "https://www.docker.com/",
       "quadrant": "Platforms",
       "ring": "Adopt/Proofed",
       "description": "Docker is a containerization platform for packaging applications and dependencies into portable containers."
@@ -244,18 +285,8 @@
       "tags": [
         "docker"
       ],
-      "name": "kubernetes",
-      "link": "https://www.npmjs.com/package/kubernetes",
-      "quadrant": "Platforms",
-      "ring": "Adopt/Proofed",
-      "description": "Kubernetes is an orchestration platform for deploying, scaling, and managing containerized applications."
-    },
-    {
-      "tags": [
-        "docker"
-      ],
       "name": "rancher desktop",
-      "link": "https://www.npmjs.com/package/rancher desktop",
+      "link": "https://rancherdesktop.io/",
       "quadrant": "Platforms",
       "ring": "Assess/New",
       "description": "Rancher Desktop is a local Kubernetes and container management environment for developers."
@@ -327,7 +358,7 @@
       "name": "idea",
       "link": "https://www.npmjs.com/package/idea",
       "quadrant": "Tools",
-      "ring": "Trial/Possible",
+      "ring": "Adopt/Proofed",
       "description": "IntelliJ IDEA — это IDE от JetBrains"
     },
     {
@@ -337,7 +368,7 @@
       "name": "vs code",
       "link": "https://www.npmjs.com/package/vs code",
       "quadrant": "Tools",
-      "ring": "Trial/Possible",
+      "ring": "Adopt/Proofed",
       "description": "VS Code (Visual Studio Code) — это редактор кода от Microsoft"
     },
     {
@@ -347,7 +378,7 @@
       "name": "webstorm",
       "link": "https://www.npmjs.com/package/webstorm",
       "quadrant": "Tools",
-      "ring": "Trial/Possible",
+      "ring": "Adopt/Proofed",
       "description": "WebStorm is JetBrains’s IDE for JavaScript, TypeScript, and modern web development."
     },
     {
@@ -367,7 +398,7 @@
       "name": "zod",
       "link": "https://www.npmjs.com/package/zod",
       "quadrant": "Languages & Frameworks",
-      "ring": "Assess/New",
+      "ring": "Adopt/Proofed",
       "description": "Zod — декларативная схема-валидация и тайпинг для TypeScript/JavaScript"
     },
     {
@@ -387,7 +418,7 @@
       "name": "eslint complexity rules",
       "link": "https://www.npmjs.com/package/eslint complexity rules",
       "quadrant": "Tools",
-      "ring": "Trial/Possible",
+      "ring": "Assess/New",
       "description": "Основная ESLint-функциональность по сложности кода реализуется через правила ESLint (max-complexity, max-params и т. п.) в конфиге"
     },
     {
@@ -424,11 +455,12 @@
       "tags": [
         "localization"
       ],
-      "name": "i18next",
-      "link": "https://www.npmjs.com/package/i18next",
+      "name": "react-i18next",
+      "link": "https://www.npmjs.com/package/react-i18next",
       "quadrant": "Languages & Frameworks",
       "ring": "Hold/Cancelled/Legacy",
-      "description": "мощная международная библиотека для локализации JavaScript/React-приложений"
+      "description": "мощная международная библиотека для локализации JavaScript/React-приложений",
+      "comment": "не используется"
     },
     {
       "tags": [
@@ -438,7 +470,8 @@
       "link": "https://www.npmjs.com/package/next-i18next",
       "quadrant": "Languages & Frameworks",
       "ring": "Hold/Cancelled/Legacy",
-      "description": "Библиотека для международной локализации (i18n) в проектах Next.js. Предоставляет хуки, компоненты и управление переводами (на базе i18next)."
+      "description": "Библиотека для международной локализации (i18n) в проектах Next.js. Предоставляет хуки, компоненты и управление переводами (на базе i18next).",
+      "comment": "не используется"
     },
     {
       "tags": [
@@ -457,7 +490,7 @@
       "name": "keycloak-js",
       "link": "https://www.npmjs.com/package/keycloak-js",
       "quadrant": "Languages & Frameworks",
-      "ring": "Assess/New",
+      "ring": "Trial/Possible",
       "description": "Клиентская JavaScript-библиотека для интеграции приложений с Keycloak (OpenID Connect/OAuth2 сервер авторизации"
     },
     {
@@ -467,7 +500,7 @@
       "name": "next-auth",
       "link": "https://www.npmjs.com/package/next-auth",
       "quadrant": "Languages & Frameworks",
-      "ring": "Adopt/Proofed",
+      "ring": "Assess/New",
       "description": "Решение для добавления аутентификации в приложения на Next.js. Поддержка OAuth-провайдеров (Google, Facebook и др.), email-аутентификация, без пароля, JWT или сессии, гибкие адаптеры"
     },
     {
@@ -487,7 +520,7 @@
       "name": "lighthouse",
       "link": "https://www.npmjs.com/package/lighthouse",
       "quadrant": "Techniques",
-      "ring": "Adopt/Proofed",
+      "ring": "Trial/Possible",
       "description": "CLI-инструмент от Google для аудита качества веб-страниц — скорость, доступность, SEO, PWA и лучшие практики. Выдает отчёт с метриками и рекомендациями."
     },
     {
@@ -497,8 +530,9 @@
       "name": "vite-plugin-pwa",
       "link": "https://www.npmjs.com/package/vite-plugin-pwa",
       "quadrant": "Techniques",
-      "ring": "Trial/Possible",
-      "description": "плагин для Vite, делающий проект Progressive Web App (PWA) с автоматическим service worker, манифестом и оффлайн-поддержкой"
+      "ring": "Hold/Cancelled/Legacy",
+      "description": "плагин для Vite, делающий проект Progressive Web App (PWA) с автоматическим service worker, манифестом и оффлайн-поддержкой",
+      "comment": "не используется"
     },
     {
       "tags": [
@@ -507,7 +541,7 @@
       "name": "SSG",
       "link": "https://developer.mozilla.org/en-US/docs/Glossary/SSG",
       "quadrant": "Techniques",
-      "ring": "Hold/Cancelled/Legacy",
+      "ring": "Assess/New",
       "description": "SSG (Static‑Site Generation) pre-renders pages at build time to produce static HTML for fast delivery."
     },
     {
@@ -517,7 +551,7 @@
       "name": "SSR",
       "link": "https://developer.mozilla.org/en-US/docs/Glossary/SSR",
       "quadrant": "Techniques",
-      "ring": "Adopt/Proofed",
+      "ring": "Trial/Possible",
       "description": "SSR (Server‑Side Rendering) renders pages on the server per request to improve SEO and initial load."
     },
     {
@@ -557,7 +591,7 @@
       "name": "@reduxjs/toolkit",
       "link": "https://www.npmjs.com/package/@reduxjs/toolkit",
       "quadrant": "Languages & Frameworks",
-      "ring": "Hold/Cancelled/Legacy",
+      "ring": "Adopt/Proofed",
       "description": "официальная, «правильная» оболочка для Redux — упрощает конфигурацию store, работу с редьюсерами, экшенами и асинхронными операциями"
     },
     {
@@ -584,10 +618,10 @@
       "tags": [
         "telemetry"
       ],
-      "name": "centry",
-      "link": "https://www.npmjs.com/package/centry",
+      "name": "sentry",
+      "link": "https://docs.sentry.io/platforms/javascript/guides/react/",
       "quadrant": "Tools",
-      "ring": "Assess/New",
+      "ring": "Adopt/Proofed",
       "description": "Если ты имел в виду Sentry (инструмент для отслеживания ошибок и мониторинга)"
     },
     {
@@ -614,8 +648,8 @@
       "tags": [
         "test"
       ],
-      "name": "playwrite",
-      "link": "https://www.npmjs.com/package/playwrite",
+      "name": "playwright",
+      "link": "https://www.npmjs.com/package/playwright",
       "quadrant": "Platforms",
       "ring": "Adopt/Proofed",
       "description": "но Playwright — это end-to-end-фреймворк для автоматизации браузеров"
@@ -625,7 +659,7 @@
         "test"
       ],
       "name": "postman",
-      "link": "https://www.npmjs.com/package/postman",
+      "link": "https://www.postman.com/",
       "quadrant": "Tools",
       "ring": "Adopt/Proofed",
       "description": "Postman — это отдельное приложение для тестирования API, а не npm-библиотека."
@@ -635,7 +669,7 @@
         "transport"
       ],
       "name": "rest",
-      "link": "https://www.npmjs.com/package/rest",
+      "link": "https://ru.wikipedia.org/wiki/REST",
       "quadrant": "Techniques",
       "ring": "Adopt/Proofed",
       "description": "REST как архитектурный стиль — это способ проектирования API, основанный на HTTP-методах и ресурсах (нет конкретного npm-пакета под это имя)."
@@ -648,7 +682,8 @@
       "link": "https://developer.mozilla.org/ru/docs/Web/API/Server-sent_events",
       "quadrant": "Techniques",
       "ring": "Hold/Cancelled/Legacy",
-      "description": "Традиционно веб-страница должна отправить запрос на сервер для получения новых данных, то есть страница запрашивает данные с сервера. Благодаря технологии отправляемых сервером событий (англ. Server-sent events) сервер может отправлять новые данные на веб-страницу в любое время с помощью сообщений. Внутри веб-страницы такие входящие сообщения можно рассматривать как связку «Событие + данные»."
+      "description": "Традиционно веб-страница должна отправить запрос на сервер для получения новых данных, то есть страница запрашивает данные с сервера. Благодаря технологии отправляемых сервером событий (англ. Server-sent events) сервер может отправлять новые данные на веб-страницу в любое время с помощью сообщений. Внутри веб-страницы такие входящие сообщения можно рассматривать как связку «Событие + данные».",
+      "comment": "не используется"
     },
     {
       "tags": [
@@ -658,7 +693,8 @@
       "link": "https://www.npmjs.com/package/websocket",
       "quadrant": "Techniques",
       "ring": "Hold/Cancelled/Legacy",
-      "description": "WebSocket is a full‑duplex communication protocol enabling persistent real‑time client–server connections."
+      "description": "WebSocket is a full‑duplex communication protocol enabling persistent real‑time client–server connections.",
+      "comment": "не используется"
     },
     {
       "tags": [
@@ -667,8 +703,9 @@
       "name": "@mui/material",
       "link": "https://www.npmjs.com/package/@mui/material",
       "quadrant": "Languages & Frameworks",
-      "ring": "Adopt/Proofed",
-      "description": "MUI is a React component library implementing Material Design system components."
+      "ring": "Hold/Cancelled/Legacy",
+      "description": "MUI is a React component library implementing Material Design system components.",
+      "comment": "не используется"
     },
     {
       "tags": [
@@ -679,6 +716,56 @@
       "quadrant": "Languages & Frameworks",
       "ring": "Adopt/Proofed",
       "description": "isomorphic-dompurify sanitizes HTML on both client and server to prevent XSS."
+    },
+    {
+      "tags": [
+        "uikit"
+      ],
+      "name": "tailwindcss",
+      "link": "https://www.npmjs.com/package/tailwindcss",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial/Possible",
+      "description": "A utility-first CSS framework for rapidly building custom user interfaces."
+    },
+    {
+      "tags": [
+        "uikit"
+      ],
+      "name": "shadcn",
+      "link": "https://www.npmjs.com/package/shadcn",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Trial/Possible",
+      "description": "shadcn/ui is a set of beautifully-designed, accessible components and a code distribution platform. Works with your favorite frameworks and AI models. Open Source. Open Code. This is not a component library. It is how you build your component library."
+    },
+    {
+      "tags": [
+        "open-api"
+      ],
+      "name": "stoplight",
+      "link": "https://stoplight.io/",
+      "quadrant": "Techniques",
+      "ring": "Assess/New",
+      "description": "Modern customers demand intuitive and frictionless digital experiences that you can only achieve with APIs. Stoplight is the tool with patented technology to create high-quality APIs at any scale. Design-first to develop better.\r\nБесплатный визивигдля openapi - https://github.com/stoplightio/studio/releases"
+    },
+    {
+      "tags": [
+        "uikit"
+      ],
+      "name": "@alfalab/core-component",
+      "link": "https://www.npmjs.com/package/@alfalab/core-component",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Adopt/Proofed",
+      "description": "Библиотека React компонентов для создания веб-интерфейсов"
+    },
+    {
+      "tags": [
+        "mock"
+      ],
+      "name": "msw",
+      "link": "https://www.npmjs.com/package/msw",
+      "quadrant": "Languages & Frameworks",
+      "ring": "Adopt/Proofed",
+      "description": "Mock Service Worker. Industry standard API mocking for JavaScript."
     }
   ]
 }
