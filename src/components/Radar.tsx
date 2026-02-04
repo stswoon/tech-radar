@@ -10,10 +10,9 @@ import {Modal} from "./Modal.tsx";
 interface RadarProps extends RadarConfig {
     width: number;
     height: number;
-    configType: "dev" | "sa"
 }
 
-export const Radar: FC<RadarProps> = ({entries, rings, quadrants, width, height, configType}) => {
+export const Radar: FC<RadarProps> = ({entries, rings, quadrants, width, height}) => {
     const [selectedEntryName, setSelectedEntryName] = useState<string | null>(null);
 
     // const viewBoxSize = Math.min(width, height);
@@ -43,7 +42,7 @@ export const Radar: FC<RadarProps> = ({entries, rings, quadrants, width, height,
                              onEntryClick={(entryName) => setSelectedEntryName(entryName)}/>
                 </svg>
             </div>
-            <Legend rings={rings} quadrants={quadrants} onZoom={handleZoom} configType={configType}/>
+            <Legend rings={rings} quadrants={quadrants} onZoom={handleZoom}/>
             <Modal quadrants={quadrants} rings={rings} selectedItem={selectedItem}
                    onClose={() => setSelectedEntryName(null)}/>
 

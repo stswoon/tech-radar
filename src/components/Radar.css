@@ -19,6 +19,12 @@
     margin: 4px 0 8px;
 }
 
+.stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
 .modal {
     position: fixed;
     inset: 0;

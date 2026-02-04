@@ -1,7 +1,5 @@
+.idea
+
 node_modules
 dist
 
-.vscode/*
-!.vscode/extensions.json
-.idea
-.gigaide

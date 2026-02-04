@@ -10,5 +10,8 @@ export const strings = {
     ring: "Кольцо:",
     quadrant: "Квадрант:",
     noDescription: "Описание не заполнено.",
-    close: "Закрыть"
+    close: "Закрыть",
+    loading: "Загрузка...",
+    devRadar: "Dev Radar",
+    saRadar: "SA Radar"
 }
