@@ -32,273 +32,246 @@
   ],
   "entries": [
     {
-      "tags": [
-        "ai"
-      ],
       "name": "chatgpt",
-      "link": "https://www.npmjs.com/package/chatgpt",
-      "quadrant": "Tools",
       "ring": "Adopt/Proofed",
-      "description": "ChatGPT is OpenAI’s large‑language‑model API providing text and multimodal generation capabilities."
-    },
-    {
+      "quadrant": "Tools",
+      "description": "ChatGPT is OpenAI’s large‑language‑model API providing text and multimodal generation capabilities.",
       "tags": [
         "ai"
-      ],
+      ]
+    },
+    {
       "name": "claude",
-      "link": "https://www.npmjs.com/package/claude",
-      "quadrant": "Tools",
       "ring": "Assess/New",
-      "description": "Claude is Anthropic’s AI assistant API focused on safe, steerable large‑language‑model interactions."
-    },
-    {
+      "quadrant": "Tools",
+      "description": "Claude is Anthropic’s AI assistant API focused on safe, steerable large‑language‑model interactions.",
       "tags": [
         "ai"
-      ],
-      "name": "gemini",
-      "link": "https://www.npmjs.com/package/gemini",
-      "quadrant": "Tools",
-      "ring": "Assess/New",
-      "description": "Gemini is Google’s multimodal LLM platform providing text, vision, and code generation APIs."
+      ]
     },
     {
+      "name": "gemini",
+      "ring": "Assess/New",
+      "quadrant": "Tools",
+      "description": "Gemini is Google’s multimodal LLM platform providing text, vision, and code generation APIs.",
+      "tags": [
+        "ai"
+      ]
+    },
+    {
+      "name": "Strapi",
+      "ring": "Adopt/Proofed",
+      "quadrant": "Frameworks",
+      "description": "Strapi — open-source headless CMS на Node.js для быстрого создания и управления API с красивой панелью админки, поддержкой коллекций, а также многослойной локализации контента.",
       "tags": [
         "CMS"
-      ],
-      "name": "Strapi",
-      "link": "https://strapi.io/",
-      "quadrant": "Frameworks",
-      "ring": "Adopt/Proofed",
-      "description": "Strapi — open-source headless CMS на Node.js для быстрого создания и управления API с красивой панелью админки, поддержкой коллекций, а также многослойной локализации контента."
+      ]
     },
     {
-      "tags": [
-        "diagrams"
-      ],
       "name": "drawio",
-      "link": "https://www.npmjs.com/package/drawio",
-      "quadrant": "Tools",
       "ring": "Adopt/Proofed",
-      "description": "Редактор диаграмм draw.io/diagrams.net."
-    },
-    {
+      "quadrant": "Tools",
+      "description": "Редактор диаграмм draw.io/diagrams.net.",
       "tags": [
         "diagrams"
-      ],
+      ]
+    },
+    {
       "name": "pluntuml",
-      "link": "https://www.npmjs.com/package/pluntuml",
-      "quadrant": "Tools",
       "ring": "Adopt/Proofed",
-      "description": "plantuml (likely pluntuml) renders UML diagrams from plain‑text descriptions."
-    },
-    {
-      "tags": [
-        "docs"
-      ],
-      "name": "dynosareus",
-      "link": "https://www.npmjs.com/package/dynosareus",
       "quadrant": "Tools",
-      "ring": "Assess/New"
+      "description": "plantuml (likely pluntuml) renders UML diagrams from plain‑text descriptions.",
+      "tags": [
+        "diagrams"
+      ]
     },
     {
+      "name": "dynosareus",
+      "ring": "Assess/New",
+      "quadrant": "Tools",
       "tags": [
         "docs"
-      ],
-      "name": "typedoc",
-      "link": "https://www.npmjs.com/package/typedoc",
-      "quadrant": "Techniques",
-      "ring": "Assess/New",
-      "description": "TypeDoc — инструмент для генерации документации из TypeScript-комментариев и типов."
+      ]
     },
     {
+      "name": "typedoc",
+      "ring": "Assess/New",
+      "quadrant": "Techniques",
+      "description": "TypeDoc — инструмент для генерации документации из TypeScript-комментариев и типов.",
+      "tags": [
+        "docs"
+      ]
+    },
+    {
+      "name": "cursor",
+      "ring": "Assess/New",
+      "quadrant": "Tools",
+      "description": "Современный AI-редактор",
       "tags": [
         "ide"
-      ],
-      "name": "cursor",
-      "link": "https://www.npmjs.com/package/cursor",
-      "quadrant": "Tools",
-      "ring": "Assess/New",
-      "description": "Современный AI-редактор"
+      ]
     },
     {
+      "name": "swagger",
+      "ring": "Adopt/Proofed",
+      "quadrant": "Techniques",
+      "description": "Суит инструментов для проектирования, документирования и тестирования REST-API (на основе OpenAPI).",
       "tags": [
         "open-api"
-      ],
-      "name": "swagger",
-      "link": "https://www.npmjs.com/package/swagger",
-      "quadrant": "Techniques",
-      "ring": "Adopt/Proofed",
-      "description": "Суит инструментов для проектирования, документирования и тестирования REST-API (на основе OpenAPI)."
+      ]
     },
     {
+      "name": "lighthouse",
+      "ring": "Adopt/Proofed",
+      "quadrant": "Techniques",
+      "description": "CLI-инструмент от Google для аудита качества веб-страниц — скорость, доступность, SEO, PWA и лучшие практики. Выдает отчёт с метриками и рекомендациями.",
       "tags": [
         "performance"
-      ],
-      "name": "lighthouse",
-      "link": "https://www.npmjs.com/package/lighthouse",
-      "quadrant": "Techniques",
-      "ring": "Adopt/Proofed",
-      "description": "CLI-инструмент от Google для аудита качества веб-страниц — скорость, доступность, SEO, PWA и лучшие практики. Выдает отчёт с метриками и рекомендациями."
+      ]
     },
     {
-      "tags": [
-        "transport"
-      ],
       "name": "REST API",
-      "link": "https://www.npmjs.com/package/rest",
-      "quadrant": "Techniques",
       "ring": "Adopt/Proofed",
-      "description": "REST как архитектурный стиль — это способ проектирования API, основанный на HTTP-методах и ресурсах (нет конкретного npm-пакета под это имя)."
-    },
-    {
+      "quadrant": "Techniques",
+      "description": "REST как архитектурный стиль — это способ проектирования API, основанный на HTTP-методах и ресурсах (нет конкретного npm-пакета под это имя).",
       "tags": [
         "transport"
-      ],
+      ]
+    },
+    {
       "name": "SSE",
-      "link": "https://developer.mozilla.org/ru/docs/Web/API/Server-sent_events",
-      "quadrant": "Techniques",
       "ring": "Hold/Cancelled/Legacy",
-      "description": "Традиционно веб-страница должна отправить запрос на сервер для получения новых данных, то есть страница запрашивает данные с сервера. Благодаря технологии отправляемых сервером событий (англ. Server-sent events) сервер может отправлять новые данные на веб-страницу в любое время с помощью сообщений. Внутри веб-страницы такие входящие сообщения можно рассматривать как связку «Событие + данные»."
-    },
-    {
+      "quadrant": "Techniques",
+      "description": "Традиционно веб-страница должна отправить запрос на сервер для получения новых данных, то есть страница запрашивает данные с сервера. Благодаря технологии отправляемых сервером событий (англ. Server-sent events) сервер может отправлять новые данные на веб-страницу в любое время с помощью сообщений. Внутри веб-страницы такие входящие сообщения можно рассматривать как связку «Событие + данные».",
       "tags": [
         "transport"
-      ],
-      "name": "websocket",
-      "link": "https://www.npmjs.com/package/websocket",
-      "quadrant": "Techniques",
-      "ring": "Hold/Cancelled/Legacy",
-      "description": "WebSocket is a full‑duplex communication protocol enabling persistent real‑time client–server connections."
+      ]
     },
     {
+      "name": "websocket",
+      "ring": "Hold/Cancelled/Legacy",
+      "quadrant": "Techniques",
+      "description": "WebSocket is a full‑duplex communication protocol enabling persistent real‑time client–server connections.",
+      "tags": [
+        "transport"
+      ]
+    },
+    {
+      "name": "@mui/material",
+      "ring": "Adopt/Proofed",
+      "quadrant": "Frameworks",
+      "description": "MUI is a React component library implementing Material Design system components.",
       "tags": [
         "xss"
-      ],
-      "name": "@mui/material",
-      "link": "https://www.npmjs.com/package/@mui/material",
-      "quadrant": "Frameworks",
-      "ring": "Adopt/Proofed",
-      "description": "MUI is a React component library implementing Material Design system components."
+      ]
     },
     {
+      "name": "Contract-First (API-First)",
+      "ring": "Assess/New",
+      "quadrant": "Patterns",
+      "description": "API-first подход в разработке программного обеспечения — это стратегия, при которой проектирование и создание программных интерфейсов (API) происходит на начальной стадии разработки, прежде чем будут реализованы другие компоненты системы. ",
       "tags": [
         "architecture"
-      ],
-      "name": "Contract-First (API-First)",
-      "link": "https://swagger.io/resources/articles/adopting-an-api-first-approach/",
-      "quadrant": "Patterns",
-      "ring": "Assess/New",
-      "description": "API-first подход в разработке программного обеспечения — это стратегия, при которой проектирование и создание программных интерфейсов (API) происходит на начальной стадии разработки, прежде чем будут реализованы другие компоненты системы. "
+      ]
     },
     {
+      "name": "AlfaGen",
+      "ring": "Assess/New",
+      "quadrant": "Tools",
+      "description": "AlfaGen -  это платформа, разработанная в Банке, которая позволяет создавать новые клиентские пути и новый UX для продуктов Банка с использованием генеративного ИИ, а также помогает сотрудникам ускорять рабочие процессы (поиск, анализ, документация, разработка кода, тестирование, автоматизация рутины), и все это при соблюдении требований безопасности и комплаенса.\n",
       "tags": [
         "ai"
-      ],
-      "name": "AlfaGen",
-      "link": "https://confluence.moscow.alfaintra.net/pages/viewpage.action?pageId=1473671047",
-      "quadrant": "Tools",
-      "ring": "Assess/New",
-      "description": "AlfaGen -  это платформа, разработанная в Банке, которая позволяет создавать новые клиентские пути и новый UX для продуктов Банка с использованием генеративного ИИ, а также помогает сотрудникам ускорять рабочие процессы (поиск, анализ, документация, разработка кода, тестирование, автоматизация рутины), и все это при соблюдении требований безопасности и комплаенса.\n"
+      ]
     },
     {
-      "tags": [
-        "database"
-      ],
       "name": "PostgreSQL",
-      "link": "https://www.postgresql.org/",
+      "ring": "Adopt/Proofed",
       "quadrant": "Techniques",
-      "ring": "Adopt/Proofed",
-      "description": "PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance."
-    },
-    {
+      "description": "PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance.",
       "tags": [
         "database"
-      ],
+      ]
+    },
+    {
       "name": "Redis",
-      "link": "https://redis.io/",
-      "quadrant": "Frameworks",
       "ring": "Adopt/Proofed",
-      "description": "Redis — нереляционная NoSQL-система управления базами данных (СУБД) с открытым исходным кодом."
-    },
-    {
+      "quadrant": "Frameworks",
+      "description": "Redis — нереляционная NoSQL-система управления базами данных (СУБД) с открытым исходным кодом.",
       "tags": [
         "database"
-      ],
-      "name": "mongoDB",
-      "link": "https://www.mongodb.com/?version=latest",
-      "quadrant": "Frameworks",
-      "ring": "Adopt/Proofed",
-      "description": "MongoDB — это популярная NoSQL СУБД, или система управления базами данных, которая предназначена для хранения больших объемов данных в формате документов."
+      ]
     },
     {
+      "name": "mongoDB",
+      "ring": "Adopt/Proofed",
+      "quadrant": "Frameworks",
+      "description": "MongoDB — это популярная NoSQL СУБД, или система управления базами данных, которая предназначена для хранения больших объемов данных в формате документов.",
+      "tags": [
+        "database"
+      ]
+    },
+    {
+      "name": "Apache Kafka",
+      "ring": "Adopt/Proofed",
+      "quadrant": "Frameworks",
+      "description": "Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration",
       "tags": [
         "transport"
-      ],
-      "name": "Apache Kafka",
-      "link": "https://kafka.apache.org/",
-      "quadrant": "Frameworks",
-      "ring": "Adopt/Proofed",
-      "description": "Apache Kafka is an open-source distributed event streaming platform used by thousands of companies for high-performance data pipelines, streaming analytics, data integration"
+      ]
     },
     {
+      "name": "Zitadel",
+      "ring": "Adopt/Proofed",
+      "quadrant": "Techniques",
+      "description": "ZITADEL is the identity infrastructure platform that is built for developers and works for all users and applications.",
       "tags": [
         "auth"
-      ],
-      "name": "Zitadel",
-      "link": "https://confluence.moscow.alfaintra.net/display/PLA/Zitadel",
-      "quadrant": "Techniques",
-      "ring": "Adopt/Proofed",
-      "description": "ZITADEL is the identity infrastructure platform that is built for developers and works for all users and applications."
+      ]
     },
     {
-      "tags": [
-        "database"
-      ],
       "name": "Apache Cassandra",
-      "link": "https://cassandra.apache.org/_/index.html",
-      "quadrant": "Techniques",
       "ring": "Adopt/Proofed",
-      "description": "Apache Cassandra is an open source NoSQL distributed database trusted by thousands of companies for scalability and high availability without compromising performance."
-    },
-    {
+      "quadrant": "Techniques",
+      "description": "Apache Cassandra is an open source NoSQL distributed database trusted by thousands of companies for scalability and high availability without compromising performance.",
       "tags": [
         "database"
-      ],
-      "name": "ElasticSearch",
-      "link": "https://www.elastic.co/elasticsearch",
-      "quadrant": "Techniques",
-      "ring": "Adopt/Proofed",
-      "description": "Elasticsearch is the leading distributed, RESTful, open source search and analytics engine designed for speed, horizontal scalability, reliability, and easy management. Get started for free"
+      ]
     },
     {
+      "name": "ElasticSearch",
+      "ring": "Adopt/Proofed",
+      "quadrant": "Techniques",
+      "description": "Elasticsearch is the leading distributed, RESTful, open source search and analytics engine designed for speed, horizontal scalability, reliability, and easy management. Get started for free",
+      "tags": [
+        "database"
+      ]
+    },
+    {
+      "name": "Temporal",
+      "ring": "Assess/New",
+      "quadrant": "Frameworks",
+      "description": "Temporal — открытая платформа для создания надёжных распределённых приложений. Она решает одну из ключевых проблем современной разработки: как гарантировать выполнение критически важных процессов в нестабильной среде",
       "tags": [
         "workflow"
-      ],
-      "name": "Temporal",
-      "link": "https://temporal.io/",
-      "quadrant": "Frameworks",
-      "ring": "Assess/New",
-      "description": "Temporal — открытая платформа для создания надёжных распределённых приложений. Она решает одну из ключевых проблем современной разработки: как гарантировать выполнение критически важных процессов в нестабильной среде"
+      ]
     },
     {
+      "name": "Keycloak",
+      "ring": "Adopt/Proofed",
+      "quadrant": "Frameworks",
+      "description": "Keycloak provides user federation, strong authentication, user management, fine-grained authorization, and more.",
       "tags": [
         "auth"
-      ],
-      "name": "Keycloak",
-      "link": "https://www.keycloak.org/",
-      "quadrant": "Frameworks",
-      "ring": "Adopt/Proofed",
-      "description": "Keycloak provides user federation, strong authentication, user management, fine-grained authorization, and more."
+      ]
     },
     {
+      "name": "BFF",
+      "ring": "Adopt/Proofed",
+      "quadrant": "Patterns",
+      "description": " архитектурный шаблон, при котором для каждого типа устройства или интерфейса создаётся специальный API-шлюз. Например, можно создать отдельные BFF для браузеров, мобильных приложений или публичных/партнёрских API. ",
       "tags": [
         "architecture"
-      ],
-      "name": "BFF",
-      "link": "https://confluence.moscow.alfaintra.net/pages/viewpage.action?pageId=2769517393",
-      "quadrant": "Patterns",
-      "ring": "Adopt/Proofed",
-      "description": " архитектурный шаблон, при котором для каждого типа устройства или интерфейса создаётся специальный API-шлюз. Например, можно создать отдельные BFF для браузеров, мобильных приложений или публичных/партнёрских API. "
+      ]
     }
   ]
 }

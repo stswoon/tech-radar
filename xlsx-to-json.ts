@@ -1,7 +1,7 @@
-import ExcelJS from 'exceljs';
+import ExcelJS, {type Worksheet, type CellValue } from 'exceljs';
 import fs from 'fs';
 import path from 'path';
-import {fileURLToPath} from 'url';
+import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -11,7 +11,38 @@ const OUTPUT_FILE_DEV = path.join(__dirname, 'src/tech-radar-dev.json');
 const INPUT_FILE_SA = path.join(__dirname, 'public/techRadarSourceSa.xlsx');
 const OUTPUT_FILE_SA = path.join(__dirname, 'src/tech-radar-sa.json');
 
-async function convert(inputFile, outputFile) {
+interface RowRadarEntry {
+    name: string;
+    ring: string;
+    quadrant: string;
+    isNew: string;
+    description: string;
+    tags: string;
+    hide: string;
+}
+
+interface RadarEntry {
+    name: string;
+    ring: string;
+    quadrant: string;
+    isNew: string;
+    description: string;
+    tags: string[];
+    hide: string;
+}
+
+interface Quadrant {
+    id: string;
+    name: string;
+}
+
+interface Ring {
+    id: string;
+    name: string;
+    color: string;
+}
+
+async function convert(inputFile: string, outputFile: string) {
     console.log(`Reading file: ${inputFile}`);
 
     try {
@@ -29,40 +60,43 @@ async function convert(inputFile, outputFile) {
         }
 
         // Convert sheet to JSON. header==0 means use the first row as keys
-        let dataEntries = sheetToJson(sheetRadar);
+        const rowDataEntries = sheetToJson<RowRadarEntry>(sheetRadar);
+        let dataEntries: RadarEntry[] = rowDataEntries.map(entry => ({
+            name: entry.name,
+            ring: entry.ring,
+            quadrant: entry.quadrant,
+            isNew: entry.isNew,
+            description: entry.description,
+            tags: entry.tags.split(',').map(item => item.trim()),
+            hide: entry.hide
+        }));
 
         // Filter out hidden entries
-        dataEntries = dataEntries.filter(entry => String(entry.hide) !== "true");
-        
+        dataEntries = dataEntries.filter(entry => entry.hide !== "true");
+
         const originalLen = dataEntries.length;
         console.log(`Found ${originalLen} entries.`);
-        
+
         dataEntries = dataEntries.filter(entry => !!entry.name && !!entry.ring && !!entry.quadrant);
         console.log(`Found ${dataEntries.length} entries with ring and quadrant.`);
-        
+
         if (originalLen !== dataEntries.length) {
             const s = "ERROR: some entries do not have quadrant and/or ring";
             console.error(s);
             throw new Error(s)
         }
 
-        dataEntries.forEach(entry => {
-            if (entry?.tags) {
-                entry.tags = entry.tags.split(',').map(item => item.trim());
-            }
-        });
-
         const sheetQuadrants = workbook.getWorksheet("quadrants");
         if (!sheetQuadrants) {
              throw new Error('Sheet "quadrants" not found');
         }
-        const dataQuadrants = sheetToJson(sheetQuadrants);
-        
+        const dataQuadrants = sheetToJson<Quadrant>(sheetQuadrants);
+
         const sheetRings = workbook.getWorksheet("rings");
         if (!sheetRings) {
              throw new Error('Sheet "rings" not found');
         }
-        const dataRings = sheetToJson(sheetRings);
+        const dataRings = sheetToJson<Ring>(sheetRings);
 
         const data = {quadrants: dataQuadrants, rings: dataRings, entries: dataEntries};
         const jsonContent = JSON.stringify(data, null, 2);
@@ -75,31 +109,29 @@ async function convert(inputFile, outputFile) {
     }
 }
 
-function sheetToJson(worksheet) {
-    const data = [];
-    const headers = [];
 
+function sheetToJson<T>(worksheet: Worksheet): T[] {
+    const headers: string[] = [];
+    worksheet.getRow(1).eachCell((cell, colNumber) => {
+        headers[colNumber] = String(cell.value);
+    });
 
+    const data: T[] = [];
     worksheet.eachRow((row, rowNumber) => {
-        if (rowNumber === 1) {
-            // Capture headers
-            row.eachCell((cell, colNumber) => {
-                headers[colNumber] = cell.value;
-            });
-        } else {
-            const rowData = {};
+        if (rowNumber !== 1) { //skip headers
+            const rowData: any = {}; // eslint-disable-line @typescript-eslint/no-explicit-any
             let hasData = false;
             row.eachCell((cell, colNumber) => {
                 const header = headers[colNumber];
                 if (header) {
-                    let val = cell.value;
+                    let val: CellValue = cell.value;
                     // Handle rich text and formulas
                     if (val && typeof val === 'object') {
-                        if (val.richText) {
+                        if ('richText' in val && val.richText) {
                             val = val.richText.map(t => t.text).join('');
-                        } else if (val.text) {
+                        } else if ('text' in val && val.text) {
                             val = val.text;
-                        } else if (val.result !== undefined) {
+                        } else if ('result' in val && val.result !== undefined) {
                             val = val.result;
                         }
                     }
@@ -108,7 +140,7 @@ function sheetToJson(worksheet) {
                 }
             });
             if (hasData) {
-                data.push(rowData);
+                data.push(rowData as T);
             }
         }
     });
