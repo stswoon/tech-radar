@@ -1,7 +1,7 @@
 import './App.css'
 
-import radarDataDev from "./tech-radar-dev.json";
-import radarDataSa from "./tech-radar-sa.json";
+import radarDataDev from "./entry-data/tech-radar-dev.json";
+import radarDataSa from "./entry-data/tech-radar-sa.json";
 
 import {TechRadar} from "./components";
 import type {RadarConfig, RadarEntry, RadarQuadrant, RadarRing} from "./components";

@@ -1,25 +1,7 @@
-import ExcelJS, {type Worksheet, type CellValue } from 'exceljs';
+import ExcelJS from 'exceljs';
 import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
+import {sheetToJson} from "./utils";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-
-const INPUT_FILE_DEV = path.join(__dirname, 'public/techRadarSourceDev.xlsx');
-const OUTPUT_FILE_DEV = path.join(__dirname, 'src/tech-radar-dev.json');
-const INPUT_FILE_SA = path.join(__dirname, 'public/techRadarSourceSa.xlsx');
-const OUTPUT_FILE_SA = path.join(__dirname, 'src/tech-radar-sa.json');
-
-interface RowRadarEntry {
-    name: string;
-    ring: string;
-    quadrant: string;
-    isNew: string;
-    description: string;
-    tags: string;
-    hide: string;
-}
 
 interface RadarEntry {
     name: string;
@@ -28,6 +10,16 @@ interface RadarEntry {
     isNew: string;
     description: string;
     tags: string[];
+    hide: string;
+}
+
+interface RowRadarEntry {
+    name: string;
+    ring: string;
+    quadrant: string;
+    isNew: string;
+    description: string;
+    tags: string;
     hide: string;
 }
 
@@ -42,7 +34,7 @@ interface Ring {
     color: string;
 }
 
-async function convert(inputFile: string, outputFile: string) {
+export async function convert(inputFile: string, outputFile: string) {
     console.log(`Reading file: ${inputFile}`);
 
     try {
@@ -88,13 +80,13 @@ async function convert(inputFile: string, outputFile: string) {
 
         const sheetQuadrants = workbook.getWorksheet("quadrants");
         if (!sheetQuadrants) {
-             throw new Error('Sheet "quadrants" not found');
+            throw new Error('Sheet "quadrants" not found');
         }
         const dataQuadrants = sheetToJson<Quadrant>(sheetQuadrants);
 
         const sheetRings = workbook.getWorksheet("rings");
         if (!sheetRings) {
-             throw new Error('Sheet "rings" not found');
+            throw new Error('Sheet "rings" not found');
         }
         const dataRings = sheetToJson<Ring>(sheetRings);
 
@@ -108,46 +100,3 @@ async function convert(inputFile: string, outputFile: string) {
         process.exit(1);
     }
 }
-
-
-function sheetToJson<T>(worksheet: Worksheet): T[] {
-    const headers: string[] = [];
-    worksheet.getRow(1).eachCell((cell, colNumber) => {
-        headers[colNumber] = String(cell.value);
-    });
-
-    const data: T[] = [];
-    worksheet.eachRow((row, rowNumber) => {
-        if (rowNumber !== 1) { //skip headers
-            const rowData: any = {}; // eslint-disable-line @typescript-eslint/no-explicit-any
-            let hasData = false;
-            row.eachCell((cell, colNumber) => {
-                const header = headers[colNumber];
-                if (header) {
-                    let val: CellValue = cell.value;
-                    // Handle rich text and formulas
-                    if (val && typeof val === 'object') {
-                        if ('richText' in val && val.richText) {
-                            val = val.richText.map(t => t.text).join('');
-                        } else if ('text' in val && val.text) {
-                            val = val.text;
-                        } else if ('result' in val && val.result !== undefined) {
-                            val = val.result;
-                        }
-                    }
-                    rowData[header] = val;
-                    hasData = true;
-                }
-            });
-            if (hasData) {
-                data.push(rowData as T);
-            }
-        }
-    });
-    return data;
-}
-
-(async () => {
-    await convert(INPUT_FILE_DEV, OUTPUT_FILE_DEV);
-    await convert(INPUT_FILE_SA, OUTPUT_FILE_SA);
-})();
