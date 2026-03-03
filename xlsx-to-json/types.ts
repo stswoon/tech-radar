@@ -56,12 +56,10 @@ export interface RawRadarEntry extends Partial<CommonRadarEntry> {
 }
 
 export interface Quadrant {
-    id: string;
     name: string;
 }
 
 export interface Ring {
-    id: string;
     name: string;
     color: string;
 }

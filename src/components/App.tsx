@@ -1,11 +1,7 @@
-import './App.css'
-
-import radarDataDev from "./entry-data/tech-radar-dev.json";
-import radarDataSa from "./entry-data/tech-radar-sa.json";
-
-import {TechRadar} from "./components";
-import type {RadarConfig, RadarEntry, RadarQuadrant, RadarRing} from "./components";
-import {useConfigStore} from "./store/useConfigStore";
+import radarStructure from "../tech-radar.json";
+import {useConfigStore} from "../store/useConfigStore";
+import type {RadarConfig, RadarEntry, RadarQuadrant, RadarRing} from "./types.ts";
+import {TechRadar} from "./TechRadar.tsx";
 
 interface RawData {
     rings: unknown[];
@@ -21,7 +17,7 @@ const getConfig = (data: RawData): RadarConfig => ({
 
 function App() {
     const {configType} = useConfigStore();
-    const currentConfig = configType === 'dev' ? getConfig(radarDataDev) : getConfig(radarDataSa);
+    const currentConfig = configType === 'dev' ? getConfig(radarStructure) : getConfig(radarDataSa);
 
     return (
         <div className="app" style={{height: "100vh"}}>
