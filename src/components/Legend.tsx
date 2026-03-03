@@ -2,6 +2,11 @@ import {useCallback, useState, type FC} from "react";
 import {type RadarQuadrant, type RadarRing} from "./types.ts";
 import {strings} from "./strings.ts";
 import {useConfigStore} from "../store/useConfigStore.ts";
+import {Button} from '@alfalab/core-components/button';
+import {Typography} from '@alfalab/core-components/typography';
+import {Space} from '@alfalab/core-components/space';
+import {Select} from '@alfalab/core-components/select';
+import type { OptionShape} from '@alfalab/core-components/select/typings';
 
 
 interface ModalProps {
@@ -34,47 +39,60 @@ export const Legend: FC<ModalProps> = ({rings, quadrants, onZoom}) => {
 
     const {configType, setConfigType} = useConfigStore();
 
+    const radarOptions: OptionShape[] = [
+        {key: 'dev', content: strings.devRadar},
+        {key: 'sa', content: strings.saRadar}
+    ];
+
     return (
-        <div className="legend stack">
-            <div>
-                <button className="normal-button" disabled={configType === 'dev'}
-                        onClick={() => setConfigType('dev')}>
-                    {strings.devRadar}
-                </button>
-                <button className="normal-button" disabled={configType === 'sa'}
-                        onClick={() => setConfigType('sa')}>
-                    {strings.saRadar}
-                </button>
-            </div>
+        <div className="legend">
+            <Space direction="vertical" size={16}>
+                <Select
+                    options={radarOptions}
+                    selected={configType}
+                    onChange={(payload) => setConfigType(payload?.selected?.key as 'dev' | 'sa')}
+                    block
+                />
 
+                {/*<Select*/}
+                {/*    options={radarOptions}*/}
+                {/*    selected={configType}*/}
+                {/*    onChange={(payload) => setConfigType(payload?.selected?.key as 'dev' | 'sa')}*/}
+                {/*    block*/}
+                {/*/>*/}
 
-            <h2>{strings.legend}</h2>
+                <Typography.Title tag="h2" view="small">{strings.legend}</Typography.Title>
 
-            <h4>{strings.rings}</h4>
-            <ul className="legend__ul-circle">
-                {rings.map((radarRings) => (
-                    <li key={radarRings.name}>
+                <Typography.Title tag="h4" view="xsmall">{strings.rings}</Typography.Title>
+
+                <ul className="legend__ul-circle">
+                    {rings.map((radarRings) => (
+                        <li key={radarRings.name} style={{display: 'flex', alignItems: 'center'}}>
                             <span className="legend__li-circle"
                                   style={{backgroundColor: radarRings.color}}
                             />
-                        <span>{radarRings.name}</span>
-                    </li>
-                ))}
-            </ul>
+                            <Typography.Text view="primary-small">{radarRings.name}</Typography.Text>
+                        </li>
+                    ))}
+                </ul>
 
-            <h4>{strings.quadrants}</h4>
-            <ul className="legend__ul-circle">
-                {quadrants.map((radarQuadrant, idx) => (
-                    <li key={radarQuadrant.name}>{idx + 1}. {radarQuadrant.name}</li>
-                ))}
-            </ul>
+                <Typography.Title tag="h4" view="xsmall">{strings.quadrants}</Typography.Title>
+                <ul className="legend__ul-circle">
+                    {quadrants.map((radarQuadrant, idx) => (
+                        <li key={radarQuadrant.name}>
+                            <Typography.Text view="primary-small">{idx + 1}. {radarQuadrant.name}</Typography.Text>
+                        </li>
+                    ))}
+                </ul>
 
-            <button className="normal-button"
-                    onClick={handleZoomClick}>{zoom ? strings.zoomOut : strings.zoomIn}</button>
+                <Button view="secondary" onClick={handleZoomClick} block>
+                    {zoom ? strings.zoomOut : strings.zoomIn}
+                </Button>
 
-            <button className="normal-button" onClick={downloadExcel} disabled={isDownloading}>
-                {isDownloading ? strings.loading : strings.downloadSource}
-            </button>
+                <Button view="secondary" onClick={downloadExcel} loading={isDownloading} block>
+                    {strings.downloadSource}
+                </Button>
+            </Space>
         </div>
     );
 };
