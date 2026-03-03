@@ -1,6 +1,6 @@
-import {type Worksheet, type CellValue } from 'exceljs';
+import {type Worksheet, type CellValue, type Workbook } from 'exceljs';
 
-export function sheetToJson<T>(worksheet: Worksheet): T[] {
+function sheetToJson<T>(worksheet: Worksheet): T[] {
     const headers: string[] = [];
     worksheet.getRow(1).eachCell((cell, colNumber) => {
         headers[colNumber] = String(cell.value);
@@ -35,4 +35,12 @@ export function sheetToJson<T>(worksheet: Worksheet): T[] {
         }
     });
     return data;
+}
+
+export function getSheetData<T>(workbook: Workbook, sheetName: string) {
+    const sheet = workbook.getWorksheet(sheetName);
+    if (!sheet) {
+        throw new Error(`Sheet "${sheetName}" not found`);
+    }
+    return sheetToJson<T>(sheet);
 }
