@@ -1,7 +1,7 @@
 import {type FC, useMemo} from "react";
-import {type RadarQuadrant, type RadarRing} from "./types.ts";
-import {FIST_RING_COUNT, QUADRANTS_WITH_ANGLE_LINE_WIDTH, RING_LINE_WIDTH} from "./const.ts";
-import {isApproximatelyEqual, quadrantsWithAnglesUtil} from "./utils.ts";
+import {type RadarQuadrant, type RadarRing} from "../utils/types.ts";
+import {FIST_RING_COUNT, QUADRANTS_WITH_ANGLE_LINE_WIDTH, RING_LINE_WIDTH} from "../utils/const.ts";
+import {isApproximatelyEqual, quadrantsWithAnglesUtil} from "../utils/utils.ts";
 
 interface StructureProps {
     quadrants: RadarQuadrant[];

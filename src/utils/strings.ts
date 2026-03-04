@@ -13,5 +13,7 @@ export const strings = {
     close: "Закрыть",
     loading: "Загрузка...",
     devRadar: "Dev Radar",
-    saRadar: "SA Radar"
+    saRadar: "SA Radar",
+    domains: "Домены:",
+    expertise: "Компетенции:"
 }

@@ -1,7 +1,14 @@
 import {useCallback, useState, type FC} from "react";
-import {type RadarQuadrant, type RadarRing} from "./types.ts";
-import {strings} from "./strings.ts";
+import {type RadarQuadrant, type RadarRing} from "../utils/types.ts";
+import {strings} from "../utils/strings.ts";
 import {useConfigStore} from "../store/useConfigStore.ts";
+import {Button} from '@alfalab/core-components/button';
+import {Typography} from '@alfalab/core-components/typography';
+import {Space} from '@alfalab/core-components/space';
+import {Select} from '@alfalab/core-components/select';
+import type {OptionShape} from '@alfalab/core-components/select/typings';
+import {getDomains, getExpertise} from "../utils/config.ts";
+import {Scrollbar} from '@alfalab/core-components/scrollbar';
 
 
 interface ModalProps {
@@ -11,18 +18,19 @@ interface ModalProps {
 }
 
 export const Legend: FC<ModalProps> = ({rings, quadrants, onZoom}) => {
-    const [isDownloading, setIsDownloading] = useState<boolean>(false);
+    const [isDownloading, setDownloading] = useState<boolean>(false);
 
     const downloadExcel = () => {
-        setIsDownloading(true); //because of strange hangs between click and showing download system dialog
+        setDownloading(true);
         const link = document.createElement("a");
-        const name = `techRadarSource${configType === "dev" ? "Dev" : "Sa"}.xlsx`
+        const name = `raw-entry-data/${domain}/${expertise}.xlsx`
         link.href = name;
         link.download = name;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        setIsDownloading(false);
+        setTimeout(() => setDownloading(false), 1000) //because of strange hangs between click and showing download system dialog
+
     }
 
     const [zoom, setZoom] = useState<boolean>(false);
@@ -32,49 +40,63 @@ export const Legend: FC<ModalProps> = ({rings, quadrants, onZoom}) => {
         onZoom(!zoom);
     }, [onZoom, zoom])
 
-    const {configType, setConfigType} = useConfigStore();
+    const {domain, setDomain, expertise, setExpertise} = useConfigStore(); //TODO: const increasePopulation = useBear((state) => state.increasePopulation)
+
+    const domainOptions: OptionShape[] = getDomains().map(name => ({key: name, content: name}))
+    const expertiseOptions: OptionShape[] = getExpertise(domain).map(name => ({key: name, content: name}))
 
     return (
-        <div className="legend stack">
-            <div>
-                <button className="normal-button" disabled={configType === 'dev'}
-                        onClick={() => setConfigType('dev')}>
-                    {strings.devRadar}
-                </button>
-                <button className="normal-button" disabled={configType === 'sa'}
-                        onClick={() => setConfigType('sa')}>
-                    {strings.saRadar}
-                </button>
-            </div>
+        <Scrollbar className="legend" style={{height: '100%'}}>
+            <Space direction="vertical" size={16} fullWidth>
+                <Select
+                    label={strings.domains}
+                    options={domainOptions}
+                    selected={domain}
+                    onChange={(payload) => setDomain(payload!.selected!.key)}
+                    block
+                    multiple={false}
+                />
 
+                <Select
+                    label={strings.expertise}
+                    options={expertiseOptions}
+                    selected={expertise}
+                    onChange={(payload) => setExpertise(payload!.selected!.key)}
+                    block
+                    multiple={false}
+                />
 
-            <h2>{strings.legend}</h2>
+                <Typography.Title tag="h2" view="medium">{strings.legend}</Typography.Title>
 
-            <h4>{strings.rings}</h4>
-            <ul className="legend__ul-circle">
-                {rings.map((radarRings) => (
-                    <li key={radarRings.name}>
+                <Typography.Title tag="h4" view="xsmall">{strings.rings}</Typography.Title>
+                <ul className="legend__ul-circle">
+                    {rings.map((radarRings) => (
+                        <li key={radarRings.name} style={{display: 'flex', alignItems: 'center'}}>
                             <span className="legend__li-circle"
                                   style={{backgroundColor: radarRings.color}}
                             />
-                        <span>{radarRings.name}</span>
-                    </li>
-                ))}
-            </ul>
+                            <Typography.Text view="primary-small">{radarRings.name}</Typography.Text>
+                        </li>
+                    ))}
+                </ul>
 
-            <h4>{strings.quadrants}</h4>
-            <ul className="legend__ul-circle">
-                {quadrants.map((radarQuadrant, idx) => (
-                    <li key={radarQuadrant.name}>{idx + 1}. {radarQuadrant.name}</li>
-                ))}
-            </ul>
+                <Typography.Title tag="h4" view="xsmall">{strings.quadrants}</Typography.Title>
+                <ul className="legend__ul-circle">
+                    {quadrants.map((radarQuadrant, idx) => (
+                        <li key={radarQuadrant.name}>
+                            <Typography.Text view="primary-small">{idx + 1}. {radarQuadrant.name}</Typography.Text>
+                        </li>
+                    ))}
+                </ul>
 
-            <button className="normal-button"
-                    onClick={handleZoomClick}>{zoom ? strings.zoomOut : strings.zoomIn}</button>
+                <Button view="secondary" onClick={handleZoomClick} block>
+                    {zoom ? strings.zoomOut : strings.zoomIn}
+                </Button>
 
-            <button className="normal-button" onClick={downloadExcel} disabled={isDownloading}>
-                {isDownloading ? strings.loading : strings.downloadSource}
-            </button>
-        </div>
+                <Button view="secondary" onClick={downloadExcel} loading={isDownloading} block>
+                    {strings.downloadSource}
+                </Button>
+            </Space>
+        </Scrollbar>
     );
 };

@@ -8,7 +8,7 @@ interface MarkdownProps {
 }
 
 export const Markdown: FC<MarkdownProps> = ({text}) => {
-    return (<div dangerouslySetInnerHTML={{__html: md.render(text)}}/>);
+    return (<div className='markdown' dangerouslySetInnerHTML={{__html: md.render(text)}}/>);
 }
 
 
