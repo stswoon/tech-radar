@@ -1,23 +1,13 @@
-import radarStructure from "../tech-radar.json";
 import {useConfigStore} from "../store/useConfigStore";
-import type {RadarConfig, RadarEntry, RadarQuadrant, RadarRing} from "./types.ts";
 import {TechRadar} from "./TechRadar.tsx";
-
-interface RawData {
-    rings: unknown[];
-    quadrants: unknown[];
-    entries: unknown[];
-}
-
-const getConfig = (data: RawData): RadarConfig => ({
-    rings: data.rings as RadarRing[],
-    quadrants: data.quadrants as RadarQuadrant[],
-    entries: data.entries as RadarEntry[]
-});
+import {useMemo} from "react";
+import {getRadarData} from "../utils/config.ts";
 
 function App() {
-    const {configType} = useConfigStore();
-    const currentConfig = configType === 'dev' ? getConfig(radarStructure) : getConfig(radarDataSa);
+    const {domain, expertise} = useConfigStore(); //TODO save filers in query
+    const currentConfig = useMemo(() => {
+        return getRadarData(domain, expertise);
+    }, [domain, expertise])
 
     return (
         <div className="app" style={{height: "100vh"}}>
@@ -31,7 +21,7 @@ function App() {
                      flexDirection: 'column',
                      alignItems: "center"
                  }}>
-                <TechRadar key={configType} config={currentConfig}/>
+                <TechRadar key={domain + ' ' + expertise} config={currentConfig}/>
             </div>
         </div>
     )

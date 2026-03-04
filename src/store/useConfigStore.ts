@@ -1,13 +1,16 @@
-import { create } from 'zustand';
-
-export type ConfigType = 'dev' | 'sa';
+import {create} from 'zustand';
+import {getDomains, getExpertise} from "../utils/config.ts";
 
 interface ConfigState {
-  configType: ConfigType;
-  setConfigType: (type: ConfigType) => void;
+    domain: string;
+    setDomain: (domain: string) => void;
+    expertise: string;
+    setExpertise: (expertise: string) => void;
 }
 
 export const useConfigStore = create<ConfigState>((set) => ({
-  configType: 'dev',
-  setConfigType: (type) => set({ configType: type }),
+    domain: getDomains()[0],
+    setDomain: (domain) => set({domain: domain}),
+    expertise: getExpertise(getDomains()[0])[0],
+    setExpertise: (expertise) => set({expertise: expertise}),
 }));

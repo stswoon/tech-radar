@@ -1,7 +1,7 @@
 import './Radar.css'
 
 import {type FC, useCallback, useMemo, useState} from "react";
-import {type RadarConfig} from "./types.ts";
+import {type RadarConfig} from "../utils/types.ts";
 import {Structure} from "./Structure.tsx";
 import {Entries} from "./Entries.tsx";
 import {Legend} from "./Legend.tsx";

@@ -1,7 +1,7 @@
 import {type FC} from "react";
-import {type RadarEntry, type RadarQuadrant, type RadarRing} from "./types.ts";
+import {type RadarEntry, type RadarQuadrant, type RadarRing} from "../utils/types.ts";
 import {Markdown} from "./Markdown.tsx";
-import {strings} from "./strings.ts";
+import {strings} from "../utils/strings.ts";
 import { Modal } from '@alfalab/core-components/modal';
 import { Button } from '@alfalab/core-components/button';
 import { Typography } from '@alfalab/core-components/typography';

@@ -1,7 +1,7 @@
 import {type FC, useMemo, useState} from "react";
-import {type RadarEntry, type RadarQuadrant, type RadarRing} from "./types.ts";
-import {hashStringToUnit, quadrantsWithAnglesUtil} from "./utils.ts";
-import {FIST_RING_COUNT} from "./const.ts";
+import {type RadarEntry, type RadarQuadrant, type RadarRing} from "../utils/types.ts";
+import {hashStringToUnit, quadrantsWithAnglesUtil} from "../utils/utils.ts";
+import {FIST_RING_COUNT} from "../utils/const.ts";
 
 interface EntriesProps {
     quadrants: RadarQuadrant[];
