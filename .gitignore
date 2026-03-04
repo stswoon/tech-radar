@@ -4,4 +4,4 @@ node_modules
 dist
 
 /src/tech-radar.json
-/raw-entry-data/b2b/~$**.xlsx
+/raw-entry-data/b2b/~$*.xlsx

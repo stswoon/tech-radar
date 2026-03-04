@@ -4,7 +4,7 @@ LangChain **OpenAI** package provides LangChain integrations for invoking OpenAI
 
 # alfagen
 
-Аналог ChatGPT
+Аналог **ChatGPT**
 
 # chatgpt
 
