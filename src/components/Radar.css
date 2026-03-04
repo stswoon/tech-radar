@@ -3,7 +3,8 @@
     border-radius: 8px;
     border: 1px solid #eee;
     background: #fff;
-    min-width: 240px;
+    width: 240px;
+    max-width: 240px;
 }
 
 .legend__li-circle {

@@ -1,5 +1,5 @@
 import radarStructure from "../tech-radar.json";
-import type {RadarData} from "../../xlsx-to-json/types.ts"; //TODO make common
+import type {RadarData} from "../../excel-to-json/types.ts"; //TODO make common
 
 // const SPECIAL_GROUP_ALL = "All"; //TODO: do only for expertise across domain
 

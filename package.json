@@ -8,7 +8,7 @@
     "build": "npm run convert && tsc -b && vite build && npm run lint",
     "lint": "eslint .",
     "preview": "vite preview",
-    "convert": "tsx xlsx-to-json"
+    "convert": "tsx excel-to-json"
   },
   "dependencies": {
     "@alfalab/core-components": "^50.5.0",

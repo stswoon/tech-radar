@@ -7,7 +7,7 @@ import {convertAll} from "./convert.ts";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const DATA_FOLDER = path.join(__dirname, '../raw-entry-data');
+const DATA_FOLDER = path.join(__dirname, '../public/raw-entry-data');
 const OUTPUT_FILE = path.join(__dirname, '../src/tech-radar.json');
 
 async function main() {
