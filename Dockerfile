@@ -1,11 +1,7 @@
 FROM node:22.11.0 AS builder
 WORKDIR /app
-COPY package.json package-lock.json ./
-RUN npm ci
-COPY src ./src
-COPY public ./public
-COPY index.html tsconfig.app.json tsconfig.json tsconfig.node.json vite.config.ts xlsx-to-json.js eslint.config.js ./
-RUN npm run build
+COPY . .
+RUN npm ci && npm run build
 
 
 FROM nginx:1.27.3
