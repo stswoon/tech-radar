@@ -10,7 +10,7 @@ export const getDomains = (): string[] => {
 }
 
 export const getExpertise = (domainName: string): string[] => {
-    const domain = radarStructure.domains.find(item => item.name = domainName);
+    const domain = radarStructure.domains.find(item => item.name === domainName);
     if (!domain) {
         throw new Error(`Illegal Variable: domain ${domainName} not found`);
     }
@@ -20,11 +20,11 @@ export const getExpertise = (domainName: string): string[] => {
 }
 
 export const getRadarData = (domainName: string, expertiseName: string): RadarData => {
-    const domain = radarStructure.domains.find(item => item.name = domainName);
+    const domain = radarStructure.domains.find(item => item.name === domainName);
     if (!domain) {
         throw new Error(`Illegal Variable: domain ${domainName} not found`);
     }
-    const expertise = domain.expertises.find(item => item.name = expertiseName);
+    const expertise = domain.expertises.find(item => item.name === expertiseName);
     if (!expertise) {
         throw new Error(`Illegal Variable: expertise ${expertiseName} not found`);
     }
