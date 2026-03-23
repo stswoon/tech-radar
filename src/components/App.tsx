@@ -4,7 +4,7 @@ import {useMemo} from "react";
 import {getRadarData} from "../utils/config.ts";
 
 function App() {
-    const {domain, expertise} = useConfigStore(); //TODO save filers in query
+    const {domain, expertise} = useConfigStore();
     const currentConfig = useMemo(() => {
         return getRadarData(domain, expertise);
     }, [domain, expertise])
