@@ -73,9 +73,10 @@ export const Entries: FC<EntriesProps> = ({entries, quadrants, rings, width, hei
 
             let dR = 1 - radius * radius * 0.00006;
             dR = dR < 0 ? 0 : dR;
+            dR = 1;
             const angle =
-                (quadrant.startAngle + 0.4 * dR) +
-                (quadrant.endAngle - quadrant.startAngle - 0.9 * dR) * seed1;
+                (quadrant.startAngle + 0.1 * dR) +
+                (quadrant.endAngle - quadrant.startAngle - 0.2 * dR) * seed1;
 
 
             const x = cx + radius * Math.cos(angle);
@@ -95,7 +96,7 @@ export const Entries: FC<EntriesProps> = ({entries, quadrants, rings, width, hei
         const simulation = forceSimulation(initialEntries)
             .force("x", forceX<EntryWithPosition>(d => d.initialX).strength(0.1))
             .force("y", forceY<EntryWithPosition>(d => d.initialY).strength(0.1))
-            .force("collide", forceCollide().radius(25).iterations(2))
+            .force("collide", forceCollide().radius(15).iterations(5))
             .stop();
 
         // Запускаем симуляцию на фиксированное количество итераций
