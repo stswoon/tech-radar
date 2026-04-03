@@ -4,7 +4,7 @@ COPY package.json package-lock.json ./
 RUN npm ci
 COPY src ./src
 COPY public ./public
-COPY index.html tsconfig.app.json tsconfig.json tsconfig.node.json vite.config.ts xlsx-to-json.js eslint.config.js ./
+COPY index.html tsconfig.app.json tsconfig.json tsconfig.node.json vite.config.ts xlsx-to-json.ts eslint.config.js ./
 RUN npm run build
 
 
