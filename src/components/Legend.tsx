@@ -1,14 +1,8 @@
 import {useCallback, useState, type FC} from "react";
-import {type RadarQuadrant, type RadarRing} from "../utils/types.ts";
-import {strings} from "../utils/strings.ts";
-import {useConfigStore} from "../store/useConfigStore.ts";
-import {Button} from '@alfalab/core-components/button';
-import {Typography} from '@alfalab/core-components/typography';
-import {Space} from '@alfalab/core-components/space';
-import {Select} from '@alfalab/core-components/select';
-import type {OptionShape} from '@alfalab/core-components/select/typings';
-import {getDomains, getExpertise} from "../utils/config.ts";
-import {Scrollbar} from '@alfalab/core-components/scrollbar';
+import {type RadarQuadrant, type RadarRing} from "./types.ts";
+import {strings} from "./strings.ts";
+
+// import {useConfigStore} from "../store/useConfigStore.ts";
 
 
 interface ModalProps {
@@ -18,19 +12,19 @@ interface ModalProps {
 }
 
 export const Legend: FC<ModalProps> = ({rings, quadrants, onZoom}) => {
-    const [isDownloading, setDownloading] = useState<boolean>(false);
+    const [isDownloading, setIsDownloading] = useState<boolean>(false);
 
     const downloadExcel = () => {
-        setDownloading(true);
+        setIsDownloading(true); //because of strange hangs between click and showing download system dialog
         const link = document.createElement("a");
-        const name = `raw-entry-data/${domain}/${expertise}.xlsx`
+        // const name = `techRadarSource${configType === "dev" ? "Dev" : "Sa"}.xlsx`
+        const name = `techRadarSourceDev.xlsx`
         link.href = name;
         link.download = name;
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        setTimeout(() => setDownloading(false), 1000) //because of strange hangs between click and showing download system dialog
-
+        setIsDownloading(false);
     }
 
     const [zoom, setZoom] = useState<boolean>(false);
@@ -40,63 +34,37 @@ export const Legend: FC<ModalProps> = ({rings, quadrants, onZoom}) => {
         onZoom(!zoom);
     }, [onZoom, zoom])
 
-    const {domain, setDomain, expertise, setExpertise} = useConfigStore(); //TODO: const increasePopulation = useBear((state) => state.increasePopulation)
-
-    const domainOptions: OptionShape[] = getDomains().map(name => ({key: name, content: name}))
-    const expertiseOptions: OptionShape[] = getExpertise(domain).map(name => ({key: name, content: name}))
+    // const {configType, setConfigType} = useConfigStore();
 
     return (
-        <Scrollbar className="legend" style={{height: '100%'}}>
-            <Space direction="vertical" size={16} fullWidth>
-                <Select
-                    label={strings.domains}
-                    options={domainOptions}
-                    selected={domain}
-                    onChange={(payload) => setDomain(payload!.selected!.key)}
-                    block
-                    multiple={false}
-                />
+        <div className="legend stack">
+            <h2>{strings.legend}</h2>
 
-                <Select
-                    label={strings.expertise}
-                    options={expertiseOptions}
-                    selected={expertise}
-                    onChange={(payload) => setExpertise(payload!.selected!.key)}
-                    block
-                    multiple={false}
-                />
-
-                <Typography.Title tag="h2" view="medium">{strings.legend}</Typography.Title>
-
-                <Typography.Title tag="h4" view="xsmall">{strings.rings}</Typography.Title>
-                <ul className="legend__ul-circle">
-                    {rings.map((radarRings) => (
-                        <li key={radarRings.name} style={{display: 'flex', alignItems: 'center'}}>
+            <h4>{strings.rings}</h4>
+            <ul className="legend__ul-circle">
+                {rings.map((radarRings) => (
+                    <li key={radarRings.name}>
                             <span className="legend__li-circle"
                                   style={{backgroundColor: radarRings.color}}
                             />
-                            <Typography.Text view="primary-small">{radarRings.name}</Typography.Text>
-                        </li>
-                    ))}
-                </ul>
+                        <span>{radarRings.name}</span>
+                    </li>
+                ))}
+            </ul>
 
-                <Typography.Title tag="h4" view="xsmall">{strings.quadrants}</Typography.Title>
-                <ul className="legend__ul-circle">
-                    {quadrants.map((radarQuadrant, idx) => (
-                        <li key={radarQuadrant.name}>
-                            <Typography.Text view="primary-small">{idx + 1}. {radarQuadrant.name}</Typography.Text>
-                        </li>
-                    ))}
-                </ul>
+            <h4>{strings.quadrants}</h4>
+            <ul className="legend__ul-circle">
+                {quadrants.map((radarQuadrant, idx) => (
+                    <li key={radarQuadrant.name}>{idx + 1}. {radarQuadrant.name}</li>
+                ))}
+            </ul>
 
-                <Button view="secondary" onClick={handleZoomClick} block>
-                    {zoom ? strings.zoomOut : strings.zoomIn}
-                </Button>
+            <button className="normal-button"
+                    onClick={handleZoomClick}>{zoom ? strings.zoomOut : strings.zoomIn}</button>
 
-                <Button view="secondary" onClick={downloadExcel} loading={isDownloading} block>
-                    {strings.downloadSource}
-                </Button>
-            </Space>
-        </Scrollbar>
+            <button className="normal-button" onClick={downloadExcel} disabled={isDownloading}>
+                {isDownloading ? strings.loading : strings.downloadSource}
+            </button>
+        </div>
     );
 };

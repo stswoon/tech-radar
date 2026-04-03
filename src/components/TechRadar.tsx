@@ -1,5 +1,5 @@
 import {type FC} from "react";
-import {type RadarConfig} from "../utils/types.ts";
+import {type RadarConfig} from "./types.ts";
 import {Radar} from "./Radar.tsx";
 
 interface TechRadarProps {

@@ -1,11 +1,11 @@
 import './Radar.css'
 
 import {type FC, useCallback, useMemo, useState} from "react";
-import {type RadarConfig} from "../utils/types.ts";
+import {type RadarConfig} from "./types.ts";
 import {Structure} from "./Structure.tsx";
 import {Entries} from "./Entries.tsx";
 import {Legend} from "./Legend.tsx";
-import {EntryModal} from "./EntryModal.tsx";
+import {Modal} from "./Modal.tsx";
 
 interface RadarProps extends RadarConfig {
     width: number;
@@ -43,8 +43,8 @@ export const Radar: FC<RadarProps> = ({entries, rings, quadrants, width, height}
                 </svg>
             </div>
             <Legend rings={rings} quadrants={quadrants} onZoom={handleZoom}/>
-            <EntryModal quadrants={quadrants} rings={rings} selectedItem={selectedItem}
-                        onClose={() => setSelectedEntryName(null)}/>
+            <Modal quadrants={quadrants} rings={rings} selectedItem={selectedItem}
+                   onClose={() => setSelectedEntryName(null)}/>
 
         </div>
     );

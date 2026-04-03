@@ -3,5 +3,4 @@
 node_modules
 dist
 
-/src/tech-radar.json
-/public/raw-entry-data/**/~$*.xlsx
+src/tech-radar.json
