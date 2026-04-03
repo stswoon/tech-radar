@@ -1,7 +1,6 @@
 import './App.css'
 
-import radarDataDev from "./tech-radar-dev.json";
-import radarDataSa from "./tech-radar-sa.json";
+import radarData from "./tech-radar.json";
 
 import {TechRadar} from "./components";
 import type {RadarConfig, RadarEntry, RadarQuadrant, RadarRing} from "./components";
@@ -21,11 +20,10 @@ const getConfig = (data: RawData): RadarConfig => ({
 
 function App() {
     const {configType} = useConfigStore();
-    const currentConfig = configType === 'dev' ? getConfig(radarDataDev) : getConfig(radarDataSa);
+    const currentConfig = getConfig(radarData);
 
     return (
         <div className="app" style={{height: "100vh"}}>
-            {/*<Header configType={configType} setConfigType={setConfigType} />*/}
             <div className="center"
                  style={{
                      padding: 24,

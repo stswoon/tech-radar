@@ -1,7 +1,8 @@
 import {useCallback, useState, type FC} from "react";
 import {type RadarQuadrant, type RadarRing} from "./types.ts";
 import {strings} from "./strings.ts";
-import {useConfigStore} from "../store/useConfigStore.ts";
+
+// import {useConfigStore} from "../store/useConfigStore.ts";
 
 
 interface ModalProps {
@@ -16,7 +17,8 @@ export const Legend: FC<ModalProps> = ({rings, quadrants, onZoom}) => {
     const downloadExcel = () => {
         setIsDownloading(true); //because of strange hangs between click and showing download system dialog
         const link = document.createElement("a");
-        const name = `techRadarSource${configType === "dev" ? "Dev" : "Sa"}.xlsx`
+        // const name = `techRadarSource${configType === "dev" ? "Dev" : "Sa"}.xlsx`
+        const name = `techRadarSourceDev.xlsx`
         link.href = name;
         link.download = name;
         document.body.appendChild(link);
@@ -32,22 +34,10 @@ export const Legend: FC<ModalProps> = ({rings, quadrants, onZoom}) => {
         onZoom(!zoom);
     }, [onZoom, zoom])
 
-    const {configType, setConfigType} = useConfigStore();
+    // const {configType, setConfigType} = useConfigStore();
 
     return (
         <div className="legend stack">
-            <div>
-                <button className="normal-button" disabled={configType === 'dev'}
-                        onClick={() => setConfigType('dev')}>
-                    {strings.devRadar}
-                </button>
-                <button className="normal-button" disabled={configType === 'sa'}
-                        onClick={() => setConfigType('sa')}>
-                    {strings.saRadar}
-                </button>
-            </div>
-
-
             <h2>{strings.legend}</h2>
 
             <h4>{strings.rings}</h4>

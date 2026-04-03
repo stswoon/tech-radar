@@ -6,10 +6,8 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const INPUT_FILE_DEV = path.join(__dirname, 'public/techRadarSourceDev.xlsx');
-const OUTPUT_FILE_DEV = path.join(__dirname, 'src/tech-radar-dev.json');
-const INPUT_FILE_SA = path.join(__dirname, 'public/techRadarSourceSa.xlsx');
-const OUTPUT_FILE_SA = path.join(__dirname, 'src/tech-radar-sa.json');
+const INPUT_FILE = path.join(__dirname, 'public/techRadarSourceDev.xlsx');
+const OUTPUT_FILE = path.join(__dirname, 'src/tech-radar.json');
 
 interface RowRadarEntry {
     name: string;
@@ -67,7 +65,7 @@ async function convert(inputFile: string, outputFile: string) {
             quadrant: entry.quadrant,
             isNew: entry.isNew,
             description: entry.description,
-            tags: entry.tags.split(',').map(item => item.trim()),
+            tags: (entry.tags ?? '').split(',').map(item => item.trim()),
             hide: entry.hide
         }));
 
@@ -148,6 +146,5 @@ function sheetToJson<T>(worksheet: Worksheet): T[] {
 }
 
 (async () => {
-    await convert(INPUT_FILE_DEV, OUTPUT_FILE_DEV);
-    await convert(INPUT_FILE_SA, OUTPUT_FILE_SA);
+    await convert(INPUT_FILE, OUTPUT_FILE);
 })();
